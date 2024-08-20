@@ -1,0 +1,8 @@
+Thumbs.db
+/.metadata
+*.metadata
+*.settings
+/[Oo]utput
+*.elf
+*.o
+*.hex

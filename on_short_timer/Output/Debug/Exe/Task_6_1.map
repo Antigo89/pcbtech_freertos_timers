@@ -1,0 +1,1236 @@
+***********************************************************************************************
+***                                                                                         ***
+***                                    LINK INFORMATION                                     ***
+***                                                                                         ***
+***********************************************************************************************
+
+Linker version:
+
+  SEGGER ARM Linker 4.38.8 compiled Mar 22 2024 19:42:33
+  Copyright (c) 2017-2022 SEGGER Microcontroller GmbH    www.segger.com
+
+
+***********************************************************************************************
+***                                                                                         ***
+***                                     MODULE SUMMARY                                      ***
+***                                                                                         ***
+***********************************************************************************************
+
+Memory use by input file:
+
+  Object File                                       RX Code     RO Data     RW Data     ZI Data
+  ---------------------------------------------  ----------  ----------  ----------  ----------
+  gpio.o                                                 72                                    
+  heap_1.o                                              202                              76 808
+  list.o                                                248                                    
+  main.o                                                388          37                       8
+  port.o                                              1 128                       4           5
+  queue.o                                             2 422                                    
+  SEGGER_THUMB_Startup.o                                 20                                    
+  stm32f407xx_Vectors.o                                 564                                    
+  STM32F4xx_Startup.o                                    64                                    
+  system_stm32f4xx.o                                    272          16           4            
+  tasks.o                                             3 752           9                     196
+  timers.o                                            1 550           8                      60
+  ---------------------------------------------  ----------  ----------  ----------  ----------
+  Subtotal (12 objects)                              10 682          70           8      77 077
+  ---------------------------------------------  ----------  ----------  ----------  ----------
+  SEGGER_crtinit_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a
+                                                         74                                    
+  strops_unaligned_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a
+                                                        196                                    
+  ---------------------------------------------  ----------  ----------  ----------  ----------
+  Subtotal (2 archives)                                 270                                    
+  ---------------------------------------------  ----------  ----------  ----------  ----------
+  Linker created (shared data, fills, blocks):                       56                   2 048
+  =============================================  ==========  ==========  ==========  ==========
+  Total:                                             10 952         126           8      79 125
+  =============================================  ==========  ==========  ==========  ==========
+
+Memory use by archive member:
+
+  Archive member                                    RX Code     RO Data     RW Data     ZI Data
+  ---------------------------------------------  ----------  ----------  ----------  ----------
+  SEGGER_crtinit.o (SEGGER_crtinit_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+                                                         74                                    
+  strasmops_arm.o (strops_unaligned_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+                                                        196                                    
+  ---------------------------------------------  ----------  ----------  ----------  ----------
+  Subtotal (2 members from 2 archives)                  270                                    
+  Objects (12 files)                                 10 682          70           8      77 077
+  Linker created (shared data, fills, blocks):                       56                   2 048
+  =============================================  ==========  ==========  ==========  ==========
+  Total:                                             10 952         126           8      79 125
+  =============================================  ==========  ==========  ==========  ==========
+
+Memory use by linker:
+
+  Description                                       RX Code     RO Data     RW Data     ZI Data
+  ---------------------------------------------  ----------  ----------  ----------  ----------
+  Initialization table                                               56                        
+  Memory for block 'stack'                                                                2 048
+  ---------------------------------------------  ----------  ----------  ----------  ----------
+  Subtotal (linker created):                                         56                   2 048
+  ---------------------------------------------  ----------  ----------  ----------  ----------
+  Objects (12 files)                                 10 682          70           8      77 077
+  Archives (2 files)                                    270                                    
+  =============================================  ==========  ==========  ==========  ==========
+  Total:                                             10 952         126           8      79 125
+  =============================================  ==========  ==========  ==========  ==========
+
+
+***********************************************************************************************
+***                                                                                         ***
+***                                     SECTION DETAIL                                      ***
+***                                                                                         ***
+***********************************************************************************************
+
+Sections by address:
+
+  Range              Symbol or [section] Name         Size  Al  Init  Ac  Object File
+  -----------------  -------------------------  ----------  --  ----  --  -----------
+  08000000-08000187  _vectors                          392  512
+                                                                Code  RX  stm32f407xx_Vectors.o
+  08000188-0800018b  uxTopUsedPriority                   4   4  Cnst  RO  tasks.o
+  0800018c-0800018d  NMI_Handler                         2   2  Code  RX  stm32f407xx_Vectors.o
+  0800018e-0800018f  MemManage_Handler                   2   2  Code  RX  stm32f407xx_Vectors.o
+  08000190-080001b7  SVC_Handler                        40  16  Code  RX  port.o
+  080001b8-080001bf  [.rodata]                           8   4  Cnst  RO  timers.o
+  080001c0-08000227  PendSV_Handler                    104  16  Code  RX  port.o
+  08000228-08000237  AHBPrescTable                      16   4  Cnst  RO  system_stm32f4xx.o
+  08000238-0800024f  SystemInit                         24   4  Code  RX  system_stm32f4xx.o
+  08000250-08000347  SystemCoreClockUpdate             248   4  Code  RX  system_stm32f4xx.o
+  08000348-080003a7  pxPortInitialiseStack              96   4  Code  RX  port.o
+  080003a8-080003f7  prvTaskExitError                   80   4  Code  RX  port.o
+  080003f8-08000423  prvPortStartFirstTask              44   4  Code  RX  port.o
+  08000424-0800056f  xPortStartScheduler               332   4  Code  RX  port.o
+  08000570-080005c7  vPortEnterCritical                 88   4  Code  RX  port.o
+  080005c8-0800060f  vPortExitCritical                  72   4  Code  RX  port.o
+  08000610-08000653  SysTick_Handler                    68   4  Code  RX  port.o
+  08000654-0800068f  vPortSetupTimerInterrupt           60   4  Code  RX  port.o
+  08000690-080006a7  vPortEnableVFP                     24   4  Code  RX  port.o
+  080006a8-0800071f  vPortValidateInterruptPriority
+                                                       120   4  Code  RX  port.o
+  08000720-080007c3  pvPortMalloc                      164   4  Code  RX  heap_1.o
+  080007c4-080008df  xQueueGenericReset                284   4  Code  RX  queue.o
+  080008e0-08000ad7  xQueueGenericSend                 504   4  Code  RX  queue.o
+  08000ad8-08000c8f  xQueueReceive                     440   4  Code  RX  queue.o
+  08000c90-08000db3  prvAddNewTaskToReadyList          292   4  Code  RX  tasks.o
+  08000db4-08000eaf  xTaskDelayUntil                   252   4  Code  RX  tasks.o
+  08000eb0-08000f4f  vTaskStartScheduler               160   4  Code  RX  tasks.o
+  08000f50-08000f63  vTaskSuspendAll                    20   4  Code  RX  tasks.o
+  08000f64-08001157  xTaskResumeAll                    500   4  Code  RX  tasks.o
+  08001158-0800116b  xTaskGetTickCount                  20   4  Code  RX  tasks.o
+  0800116c-08001177  uxTaskGetNumberOfTasks             12   4  Code  RX  tasks.o
+  08001178-080013a3  xTaskIncrementTick                556   4  Code  RX  tasks.o
+  080013a4-08001453  vTaskSwitchContext                176   4  Code  RX  tasks.o
+  08001454-0800149b  vTaskPlaceOnEventList              72   4  Code  RX  tasks.o
+  0800149c-08001523  vTaskPlaceOnEventListRestricted
+                                                       136   4  Code  RX  tasks.o
+  08001524-080016c7  xTaskRemoveFromEventList          420   4  Code  RX  tasks.o
+  080016c8-080016eb  vTaskInternalSetTimeOutState
+                                                        36   4  Code  RX  tasks.o
+  080016ec-080017b3  xTaskCheckForTimeOut              200   4  Code  RX  tasks.o
+  080017b4-080017c3  vTaskMissedYield                   16   4  Code  RX  tasks.o
+  080017c4-08001837  prvInitialiseTaskLists            116   4  Code  RX  tasks.o
+  08001838-08001863  prvResetNextTaskUnblockTime
+                                                        44   4  Code  RX  tasks.o
+  08001864-08001897  xTaskGetSchedulerState             52   4  Code  RX  tasks.o
+  08001898-08001993  prvAddCurrentTaskToDelayedList
+                                                       252   4  Code  RX  tasks.o
+  08001994-080019f7  xTimerCreateTimerTask             100   4  Code  RX  timers.o
+  080019f8-08001a8b  xTimerGenericCommand              148   4  Code  RX  timers.o
+  08001a8c-08001ae7  prvProcessExpiredTimer             92   4  Code  RX  timers.o
+  08001ae8-08001b7f  prvProcessTimerOrBlockTask
+                                                       152   4  Code  RX  timers.o
+  08001b80-08001bbb  prvGetNextExpireTime               60   4  Code  RX  timers.o
+  08001bbc-08001bf7  prvSampleTimeNow                   60   4  Code  RX  timers.o
+  08001bf8-08001c7b  prvInsertTimerInActiveList
+                                                       132   4  Code  RX  timers.o
+  08001c7c-08001df7  prvProcessReceivedCommands
+                                                       380   4  Code  RX  timers.o
+  08001df8-08001e3f  prvSwitchTimerLists                72   4  Code  RX  timers.o
+  08001e40-08001e93  prvCheckForValidListAndQueue
+                                                        84   4  Code  RX  timers.o
+  08001e94-08001edb  GPIO_init                          72   4  Code  RX  gpio.o
+  08001edc-08001ef7  vLedOff                            28   4  Code  RX  main.o
+  08001ef8-08001f57  vTaskButton                        96   4  Code  RX  main.o
+  08001f58-08001fdf  vTaskControl                      136   4  Code  RX  main.o
+  08001fe0-0800205f  main                              128   4  Code  RX  main.o
+  08002060-08002073  _start                             20   4  Code  RX  SEGGER_THUMB_Startup.o
+  08002074-0800209b  HardFault_Handler                  40   4  Code  RX  STM32F4xx_Startup.o
+  0800209c-080020f7  memcpy                             92   4  Code  RX  strasmops_arm.o (strops_unaligned_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+  080020f8-0800215f  __aeabi_memclr                    104   4  Code  RX  strasmops_arm.o (strops_unaligned_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+  08002160-08002164  [.rodata]                           5   4  Cnst  RO  tasks.o
+  08002165-08002165  ( ALIGN .=.+1 )                     1   -  ----  -   -
+  08002166-0800218b  vPortFree                          38   2  Code  RX  heap_1.o
+  0800218c-080021b0  [.rodata]                          37   4  Cnst  RO  main.o
+  080021b1-080021b1  ( ALIGN .=.+1 )                     1   -  ----  -   -
+  080021b2-080021e7  vListInitialise                    54   2  Code  RX  list.o
+  080021e8-08002231  uxListRemove                       74   2  Code  RX  list.o
+  08002232-080022cf  xQueueGenericCreate               158   2  Code  RX  queue.o
+  080022d0-0800230d  prvInitialiseNewQueue              62   2  Code  RX  queue.o
+  0800230e-0800246f  xQueueGenericSendFromISR          354   2  Code  RX  queue.o
+  08002470-08002525  prvCopyDataToQueue                182   2  Code  RX  queue.o
+  08002526-0800256f  prvCopyDataFromQueue               74   2  Code  RX  queue.o
+  08002570-0800261d  prvUnlockQueue                    174   2  Code  RX  queue.o
+  0800261e-08002647  prvIsQueueEmpty                    42   2  Code  RX  queue.o
+  08002648-08002675  prvIsQueueFull                     46   2  Code  RX  queue.o
+  08002676-080026db  vQueueWaitForMessageRestricted
+                                                       102   2  Code  RX  queue.o
+  080026dc-08002749  prvInitialiseNewTimer             110   2  Code  RX  timers.o
+  0800274a-0800274b  BusFault_Handler                    2   2  Code  RX  stm32f407xx_Vectors.o
+  0800274c-0800274d  UsageFault_Handler                  2   2  Code  RX  stm32f407xx_Vectors.o
+  0800274e-0800274f  DebugMon_Handler                    2   2  Code  RX  stm32f407xx_Vectors.o
+  08002750-08002751  WWDG_IRQHandler                     2   2  Code  RX  stm32f407xx_Vectors.o
+  08002752-08002753  PVD_IRQHandler                      2   2  Code  RX  stm32f407xx_Vectors.o
+  08002754-08002755  TAMP_STAMP_IRQHandler               2   2  Code  RX  stm32f407xx_Vectors.o
+  08002756-08002757  RTC_WKUP_IRQHandler                 2   2  Code  RX  stm32f407xx_Vectors.o
+  08002758-08002759  FLASH_IRQHandler                    2   2  Code  RX  stm32f407xx_Vectors.o
+  0800275a-0800275b  RCC_IRQHandler                      2   2  Code  RX  stm32f407xx_Vectors.o
+  0800275c-0800275d  EXTI0_IRQHandler                    2   2  Code  RX  stm32f407xx_Vectors.o
+  0800275e-0800275f  EXTI1_IRQHandler                    2   2  Code  RX  stm32f407xx_Vectors.o
+  08002760-08002761  EXTI2_IRQHandler                    2   2  Code  RX  stm32f407xx_Vectors.o
+  08002762-08002763  EXTI3_IRQHandler                    2   2  Code  RX  stm32f407xx_Vectors.o
+  08002764-08002765  EXTI4_IRQHandler                    2   2  Code  RX  stm32f407xx_Vectors.o
+  08002766-08002767  DMA1_Stream0_IRQHandler             2   2  Code  RX  stm32f407xx_Vectors.o
+  08002768-08002769  DMA1_Stream1_IRQHandler             2   2  Code  RX  stm32f407xx_Vectors.o
+  0800276a-0800276b  DMA1_Stream2_IRQHandler             2   2  Code  RX  stm32f407xx_Vectors.o
+  0800276c-0800276d  DMA1_Stream3_IRQHandler             2   2  Code  RX  stm32f407xx_Vectors.o
+  0800276e-0800276f  DMA1_Stream4_IRQHandler             2   2  Code  RX  stm32f407xx_Vectors.o
+  08002770-08002771  DMA1_Stream5_IRQHandler             2   2  Code  RX  stm32f407xx_Vectors.o
+  08002772-08002773  DMA1_Stream6_IRQHandler             2   2  Code  RX  stm32f407xx_Vectors.o
+  08002774-08002775  ADC_IRQHandler                      2   2  Code  RX  stm32f407xx_Vectors.o
+  08002776-08002777  CAN1_TX_IRQHandler                  2   2  Code  RX  stm32f407xx_Vectors.o
+  08002778-08002779  CAN1_RX0_IRQHandler                 2   2  Code  RX  stm32f407xx_Vectors.o
+  0800277a-0800277b  CAN1_RX1_IRQHandler                 2   2  Code  RX  stm32f407xx_Vectors.o
+  0800277c-0800277d  CAN1_SCE_IRQHandler                 2   2  Code  RX  stm32f407xx_Vectors.o
+  0800277e-0800277f  EXTI9_5_IRQHandler                  2   2  Code  RX  stm32f407xx_Vectors.o
+  08002780-08002781  TIM1_BRK_TIM9_IRQHandler            2   2  Code  RX  stm32f407xx_Vectors.o
+  08002782-08002783  TIM1_UP_TIM10_IRQHandler            2   2  Code  RX  stm32f407xx_Vectors.o
+  08002784-08002785  TIM1_TRG_COM_TIM11_IRQHandler
+                                                         2   2  Code  RX  stm32f407xx_Vectors.o
+  08002786-08002787  TIM1_CC_IRQHandler                  2   2  Code  RX  stm32f407xx_Vectors.o
+  08002788-08002789  TIM2_IRQHandler                     2   2  Code  RX  stm32f407xx_Vectors.o
+  0800278a-0800278b  TIM3_IRQHandler                     2   2  Code  RX  stm32f407xx_Vectors.o
+  0800278c-0800278d  TIM4_IRQHandler                     2   2  Code  RX  stm32f407xx_Vectors.o
+  0800278e-0800278f  I2C1_EV_IRQHandler                  2   2  Code  RX  stm32f407xx_Vectors.o
+  08002790-08002791  I2C1_ER_IRQHandler                  2   2  Code  RX  stm32f407xx_Vectors.o
+  08002792-08002793  I2C2_EV_IRQHandler                  2   2  Code  RX  stm32f407xx_Vectors.o
+  08002794-08002795  I2C2_ER_IRQHandler                  2   2  Code  RX  stm32f407xx_Vectors.o
+  08002796-08002797  SPI1_IRQHandler                     2   2  Code  RX  stm32f407xx_Vectors.o
+  08002798-08002799  SPI2_IRQHandler                     2   2  Code  RX  stm32f407xx_Vectors.o
+  0800279a-0800279b  USART1_IRQHandler                   2   2  Code  RX  stm32f407xx_Vectors.o
+  0800279c-0800279d  USART2_IRQHandler                   2   2  Code  RX  stm32f407xx_Vectors.o
+  0800279e-0800279f  USART3_IRQHandler                   2   2  Code  RX  stm32f407xx_Vectors.o
+  080027a0-080027a1  EXTI15_10_IRQHandler                2   2  Code  RX  stm32f407xx_Vectors.o
+  080027a2-080027a3  RTC_Alarm_IRQHandler                2   2  Code  RX  stm32f407xx_Vectors.o
+  080027a4-080027a5  OTG_FS_WKUP_IRQHandler              2   2  Code  RX  stm32f407xx_Vectors.o
+  080027a6-080027a7  TIM8_BRK_TIM12_IRQHandler           2   2  Code  RX  stm32f407xx_Vectors.o
+  080027a8-080027a9  TIM8_UP_TIM13_IRQHandler            2   2  Code  RX  stm32f407xx_Vectors.o
+  080027aa-080027ab  TIM8_TRG_COM_TIM14_IRQHandler
+                                                         2   2  Code  RX  stm32f407xx_Vectors.o
+  080027ac-080027ad  TIM8_CC_IRQHandler                  2   2  Code  RX  stm32f407xx_Vectors.o
+  080027ae-080027af  DMA1_Stream7_IRQHandler             2   2  Code  RX  stm32f407xx_Vectors.o
+  080027b0-080027b1  FSMC_IRQHandler                     2   2  Code  RX  stm32f407xx_Vectors.o
+  080027b2-080027b3  SDIO_IRQHandler                     2   2  Code  RX  stm32f407xx_Vectors.o
+  080027b4-080027b5  TIM5_IRQHandler                     2   2  Code  RX  stm32f407xx_Vectors.o
+  080027b6-080027b7  SPI3_IRQHandler                     2   2  Code  RX  stm32f407xx_Vectors.o
+  080027b8-080027b9  UART4_IRQHandler                    2   2  Code  RX  stm32f407xx_Vectors.o
+  080027ba-080027bb  UART5_IRQHandler                    2   2  Code  RX  stm32f407xx_Vectors.o
+  080027bc-080027bd  TIM6_DAC_IRQHandler                 2   2  Code  RX  stm32f407xx_Vectors.o
+  080027be-080027bf  TIM7_IRQHandler                     2   2  Code  RX  stm32f407xx_Vectors.o
+  080027c0-080027c1  DMA2_Stream0_IRQHandler             2   2  Code  RX  stm32f407xx_Vectors.o
+  080027c2-080027c3  DMA2_Stream1_IRQHandler             2   2  Code  RX  stm32f407xx_Vectors.o
+  080027c4-080027c5  DMA2_Stream2_IRQHandler             2   2  Code  RX  stm32f407xx_Vectors.o
+  080027c6-080027c7  DMA2_Stream3_IRQHandler             2   2  Code  RX  stm32f407xx_Vectors.o
+  080027c8-080027c9  DMA2_Stream4_IRQHandler             2   2  Code  RX  stm32f407xx_Vectors.o
+  080027ca-080027cb  ETH_IRQHandler                      2   2  Code  RX  stm32f407xx_Vectors.o
+  080027cc-080027cd  ETH_WKUP_IRQHandler                 2   2  Code  RX  stm32f407xx_Vectors.o
+  080027ce-080027cf  CAN2_TX_IRQHandler                  2   2  Code  RX  stm32f407xx_Vectors.o
+  080027d0-080027d1  CAN2_RX0_IRQHandler                 2   2  Code  RX  stm32f407xx_Vectors.o
+  080027d2-080027d3  CAN2_RX1_IRQHandler                 2   2  Code  RX  stm32f407xx_Vectors.o
+  080027d4-080027d5  CAN2_SCE_IRQHandler                 2   2  Code  RX  stm32f407xx_Vectors.o
+  080027d6-080027d7  OTG_FS_IRQHandler                   2   2  Code  RX  stm32f407xx_Vectors.o
+  080027d8-080027d9  DMA2_Stream5_IRQHandler             2   2  Code  RX  stm32f407xx_Vectors.o
+  080027da-080027db  DMA2_Stream6_IRQHandler             2   2  Code  RX  stm32f407xx_Vectors.o
+  080027dc-080027dd  DMA2_Stream7_IRQHandler             2   2  Code  RX  stm32f407xx_Vectors.o
+  080027de-080027df  USART6_IRQHandler                   2   2  Code  RX  stm32f407xx_Vectors.o
+  080027e0-080027e1  I2C3_EV_IRQHandler                  2   2  Code  RX  stm32f407xx_Vectors.o
+  080027e2-080027e3  I2C3_ER_IRQHandler                  2   2  Code  RX  stm32f407xx_Vectors.o
+  080027e4-080027e5  OTG_HS_EP1_OUT_IRQHandler           2   2  Code  RX  stm32f407xx_Vectors.o
+  080027e6-080027e7  OTG_HS_EP1_IN_IRQHandler            2   2  Code  RX  stm32f407xx_Vectors.o
+  080027e8-080027e9  OTG_HS_WKUP_IRQHandler              2   2  Code  RX  stm32f407xx_Vectors.o
+  080027ea-080027eb  OTG_HS_IRQHandler                   2   2  Code  RX  stm32f407xx_Vectors.o
+  080027ec-080027ed  DCMI_IRQHandler                     2   2  Code  RX  stm32f407xx_Vectors.o
+  080027ee-080027ef  HASH_RNG_IRQHandler                 2   2  Code  RX  stm32f407xx_Vectors.o
+  080027f0-080027f1  FPU_IRQHandler                      2   2  Code  RX  stm32f407xx_Vectors.o
+  080027f2-08002801  vListInitialiseItem                16   2  Code  RX  list.o
+  08002802-08002869  vListInsert                       104   2  Code  RX  list.o
+  0800286a-080028f9  xTaskCreate                       144   2  Code  RX  tasks.o
+  080028fa-080029fd  prvInitialiseNewTask              260   2  Code  RX  tasks.o
+  080029fe-08002a09  prvIdleTask                        12   2  Code  RX  tasks.o
+  08002a0a-08002a0d  prvCheckTasksWaitingTermination
+                                                         4   2  Code  RX  tasks.o
+  08002a0e-08002a4d  xTimerCreate                       64   2  Code  RX  timers.o
+  08002a4e-08002a8d  prvReloadTimer                     64   2  Code  RX  timers.o
+  08002a8e-08002aad  prvTimerTask                       32   2  Code  RX  timers.o
+  08002aae-08002ac5  reset_handler                      24   2  Code  RX  STM32F4xx_Startup.o
+  08002ac6-08002ac7  ( UNUSED .=.+2 )                    2   -  ----  -   -
+  08002ac8-08002acb  [.init_array]                       4   4  ----  --  STM32F4xx_Startup.o
+  08002acc-08002aef  __SEGGER_init_ctors                36   4  Code  RX  SEGGER_crtinit.o (SEGGER_crtinit_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+  08002af0-08002b1f  __SEGGER_init_table__              48   4  Cnst  RO  [ Linker created ]
+  08002b20-08002b27  __SEGGER_init_data__                8   4  Cnst  RO  [ Linker created ]
+  08002b28-08002b39  __SEGGER_init_zero                 18   2  Code  RX  SEGGER_crtinit.o (SEGGER_crtinit_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+  08002b3a-08002b4d  __SEGGER_init_copy                 20   2  Code  RX  SEGGER_crtinit.o (SEGGER_crtinit_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+  08002b4e-0fffffff  ( UNUSED .=.+134206642 )   134 206 642
+                                                             -  ----  -   -
+  10000000-1000003b  pxReadyTasksLists                  60   4  Zero  ZI  tasks.o
+  1000003c-1000004f  xSuspendedTaskList                 20   4  Zero  ZI  tasks.o
+  10000050-10000063  xPendingReadyList                  20   4  Zero  ZI  tasks.o
+  10000064-10000077  xDelayedTaskList2                  20   4  Zero  ZI  tasks.o
+  10000078-1000008b  xDelayedTaskList1                  20   4  Zero  ZI  tasks.o
+  1000008c-1000009f  xActiveTimerList2                  20   4  Zero  ZI  timers.o
+  100000a0-100000b3  xActiveTimerList1                  20   4  Zero  ZI  timers.o
+  100000b4-100000b7  xYieldPending                       4   4  Zero  ZI  tasks.o
+  100000b8-100000bb  xTimerTaskHandle                    4   4  Zero  ZI  timers.o
+  100000bc-100000bf  xTimerQueue                         4   4  Zero  ZI  timers.o
+  100000c0-100000c3  xTickCount                          4   4  Zero  ZI  tasks.o
+  100000c4-100000c7  xSchedulerRunning                   4   4  Zero  ZI  tasks.o
+  100000c8-100000cb  xPendedTicks                        4   4  Zero  ZI  tasks.o
+  100000cc-100000cf  xNumOfOverflows                     4   4  Zero  ZI  tasks.o
+  100000d0-100000d3  xNextTaskUnblockTime                4   4  Zero  ZI  tasks.o
+  100000d4-100000d7  xNextFreeByte                       4   4  Zero  ZI  heap_1.o
+  100000d8-100000db  xLastTime.0                         4   4  Zero  ZI  timers.o
+  100000dc-100000df  xIdleTaskHandle                     4   4  Zero  ZI  tasks.o
+  100000e0-100000e3  uxTopReadyPriority                  4   4  Zero  ZI  tasks.o
+  100000e4-100000e7  uxTaskNumber                        4   4  Zero  ZI  tasks.o
+  100000e8-100000eb  uxSchedulerSuspended                4   4  Zero  ZI  tasks.o
+  100000ec-100000ef  uxCurrentNumberOfTasks              4   4  Zero  ZI  tasks.o
+  100000f0-100000f3  ulMaxPRIGROUPValue                  4   4  Zero  ZI  port.o
+  100000f4-100000f7  pxOverflowTimerList                 4   4  Zero  ZI  timers.o
+  100000f8-100000fb  pxOverflowDelayedTaskList           4   4  Zero  ZI  tasks.o
+  100000fc-100000ff  pxDelayedTaskList                   4   4  Zero  ZI  tasks.o
+  10000100-10000103  pxCurrentTimerList                  4   4  Zero  ZI  timers.o
+  10000104-10000107  pxCurrentTCB                        4   4  Zero  ZI  tasks.o
+  10000108-1000010b  pulseLedOff                         4   4  Zero  ZI  main.o
+  1000010c-1000010f  pucAlignedHeap.0                    4   4  Zero  ZI  heap_1.o
+  10000110-10000113  myQueue                             4   4  Zero  ZI  main.o
+  10000114-10000114  ucMaxSysCallPriority                1   1  Zero  ZI  port.o
+  10000115-10000117  ( UNUSED .=.+3 )                    3   -  ----  -   -
+  10000118-1000011b  uxCriticalNesting                   4   4  Init  RW  port.o
+  1000011c-1000011f  SystemCoreClock                     4   4  Init  RW  system_stm32f4xx.o
+  10000120-1fffffff  ( UNUSED .=.+268435168 )   268 435 168
+                                                             -  ----  -   -
+  20000000-20012bff  ucHeap                         76 800   4  Zero  ZI  heap_1.o
+  20012c00-2001f7ff  ( UNUSED .=.+52224 )           52 224   -  ----  -   -
+  2001f800-2001ffff  [.bss.block.stack]              2 048   8  None  ZI  [ Linker created ]
+
+
+***********************************************************************************************
+***                                                                                         ***
+***                                       SYMBOL LIST                                       ***
+***                                                                                         ***
+***********************************************************************************************
+
+Function symbols by name:
+
+  Symbol name                   Address        Size  Align  Type  Bd  Object File
+  -------------------------  ----------  ----------  -----  ----  --  -----------
+  ADC_IRQHandler             0x08002775                  2  Code  Wk  stm32f407xx_Vectors.o
+  BusFault_Handler           0x0800274B                  2  Code  Wk  stm32f407xx_Vectors.o
+  CAN1_RX0_IRQHandler        0x08002779                  2  Code  Wk  stm32f407xx_Vectors.o
+  CAN1_RX1_IRQHandler        0x0800277B                  2  Code  Wk  stm32f407xx_Vectors.o
+  CAN1_SCE_IRQHandler        0x0800277D                  2  Code  Wk  stm32f407xx_Vectors.o
+  CAN1_TX_IRQHandler         0x08002777                  2  Code  Wk  stm32f407xx_Vectors.o
+  CAN2_RX0_IRQHandler        0x080027D1                  2  Code  Wk  stm32f407xx_Vectors.o
+  CAN2_RX1_IRQHandler        0x080027D3                  2  Code  Wk  stm32f407xx_Vectors.o
+  CAN2_SCE_IRQHandler        0x080027D5                  2  Code  Wk  stm32f407xx_Vectors.o
+  CAN2_TX_IRQHandler         0x080027CF                  2  Code  Wk  stm32f407xx_Vectors.o
+  DCMI_IRQHandler            0x080027ED                  2  Code  Wk  stm32f407xx_Vectors.o
+  DMA1_Stream0_IRQHandler    0x08002767                  2  Code  Wk  stm32f407xx_Vectors.o
+  DMA1_Stream1_IRQHandler    0x08002769                  2  Code  Wk  stm32f407xx_Vectors.o
+  DMA1_Stream2_IRQHandler    0x0800276B                  2  Code  Wk  stm32f407xx_Vectors.o
+  DMA1_Stream3_IRQHandler    0x0800276D                  2  Code  Wk  stm32f407xx_Vectors.o
+  DMA1_Stream4_IRQHandler    0x0800276F                  2  Code  Wk  stm32f407xx_Vectors.o
+  DMA1_Stream5_IRQHandler    0x08002771                  2  Code  Wk  stm32f407xx_Vectors.o
+  DMA1_Stream6_IRQHandler    0x08002773                  2  Code  Wk  stm32f407xx_Vectors.o
+  DMA1_Stream7_IRQHandler    0x080027AF                  2  Code  Wk  stm32f407xx_Vectors.o
+  DMA2_Stream0_IRQHandler    0x080027C1                  2  Code  Wk  stm32f407xx_Vectors.o
+  DMA2_Stream1_IRQHandler    0x080027C3                  2  Code  Wk  stm32f407xx_Vectors.o
+  DMA2_Stream2_IRQHandler    0x080027C5                  2  Code  Wk  stm32f407xx_Vectors.o
+  DMA2_Stream3_IRQHandler    0x080027C7                  2  Code  Wk  stm32f407xx_Vectors.o
+  DMA2_Stream4_IRQHandler    0x080027C9                  2  Code  Wk  stm32f407xx_Vectors.o
+  DMA2_Stream5_IRQHandler    0x080027D9                  2  Code  Wk  stm32f407xx_Vectors.o
+  DMA2_Stream6_IRQHandler    0x080027DB                  2  Code  Wk  stm32f407xx_Vectors.o
+  DMA2_Stream7_IRQHandler    0x080027DD                  2  Code  Wk  stm32f407xx_Vectors.o
+  DebugMon_Handler           0x0800274F                  2  Code  Wk  stm32f407xx_Vectors.o
+  ETH_IRQHandler             0x080027CB                  2  Code  Wk  stm32f407xx_Vectors.o
+  ETH_WKUP_IRQHandler        0x080027CD                  2  Code  Wk  stm32f407xx_Vectors.o
+  EXTI0_IRQHandler           0x0800275D                  2  Code  Wk  stm32f407xx_Vectors.o
+  EXTI15_10_IRQHandler       0x080027A1                  2  Code  Wk  stm32f407xx_Vectors.o
+  EXTI1_IRQHandler           0x0800275F                  2  Code  Wk  stm32f407xx_Vectors.o
+  EXTI2_IRQHandler           0x08002761                  2  Code  Wk  stm32f407xx_Vectors.o
+  EXTI3_IRQHandler           0x08002763                  2  Code  Wk  stm32f407xx_Vectors.o
+  EXTI4_IRQHandler           0x08002765                  2  Code  Wk  stm32f407xx_Vectors.o
+  EXTI9_5_IRQHandler         0x0800277F                  2  Code  Wk  stm32f407xx_Vectors.o
+  FLASH_IRQHandler           0x08002759                  2  Code  Wk  stm32f407xx_Vectors.o
+  FPU_IRQHandler             0x080027F1                  2  Code  Wk  stm32f407xx_Vectors.o
+  FSMC_IRQHandler            0x080027B1                  2  Code  Wk  stm32f407xx_Vectors.o
+  GPIO_init                  0x08001E95          72      4  Code  Gb  gpio.o
+  HASH_RNG_IRQHandler        0x080027EF                  2  Code  Wk  stm32f407xx_Vectors.o
+  HardFault_Handler          0x08002075                  4  Code  Wk  STM32F4xx_Startup.o
+  I2C1_ER_IRQHandler         0x08002791                  2  Code  Wk  stm32f407xx_Vectors.o
+  I2C1_EV_IRQHandler         0x0800278F                  2  Code  Wk  stm32f407xx_Vectors.o
+  I2C2_ER_IRQHandler         0x08002795                  2  Code  Wk  stm32f407xx_Vectors.o
+  I2C2_EV_IRQHandler         0x08002793                  2  Code  Wk  stm32f407xx_Vectors.o
+  I2C3_ER_IRQHandler         0x080027E3                  2  Code  Wk  stm32f407xx_Vectors.o
+  I2C3_EV_IRQHandler         0x080027E1                  2  Code  Wk  stm32f407xx_Vectors.o
+  MemManage_Handler          0x0800018F                  2  Code  Wk  stm32f407xx_Vectors.o
+  NMI_Handler                0x0800018D                  2  Code  Wk  stm32f407xx_Vectors.o
+  OTG_FS_IRQHandler          0x080027D7                  2  Code  Wk  stm32f407xx_Vectors.o
+  OTG_FS_WKUP_IRQHandler     0x080027A5                  2  Code  Wk  stm32f407xx_Vectors.o
+  OTG_HS_EP1_IN_IRQHandler   0x080027E7                  2  Code  Wk  stm32f407xx_Vectors.o
+  OTG_HS_EP1_OUT_IRQHandler  0x080027E5                  2  Code  Wk  stm32f407xx_Vectors.o
+  OTG_HS_IRQHandler          0x080027EB                  2  Code  Wk  stm32f407xx_Vectors.o
+  OTG_HS_WKUP_IRQHandler     0x080027E9                  2  Code  Wk  stm32f407xx_Vectors.o
+  PVD_IRQHandler             0x08002753                  2  Code  Wk  stm32f407xx_Vectors.o
+  PendSV_Handler             0x080001C1         102     16  Code  Gb  port.o
+  RCC_IRQHandler             0x0800275B                  2  Code  Wk  stm32f407xx_Vectors.o
+  RTC_Alarm_IRQHandler       0x080027A3                  2  Code  Wk  stm32f407xx_Vectors.o
+  RTC_WKUP_IRQHandler        0x08002757                  2  Code  Wk  stm32f407xx_Vectors.o
+  Reset_Handler              0x08002AAF                  2  Code  Gb  STM32F4xx_Startup.o
+  SDIO_IRQHandler            0x080027B3                  2  Code  Wk  stm32f407xx_Vectors.o
+  SPI1_IRQHandler            0x08002797                  2  Code  Wk  stm32f407xx_Vectors.o
+  SPI2_IRQHandler            0x08002799                  2  Code  Wk  stm32f407xx_Vectors.o
+  SPI3_IRQHandler            0x080027B7                  2  Code  Wk  stm32f407xx_Vectors.o
+  SVC_Handler                0x08000191          38     16  Code  Gb  port.o
+  SysTick_Handler            0x08000611          68      4  Code  Gb  port.o
+  SystemCoreClockUpdate      0x08000251         248      4  Code  Gb  system_stm32f4xx.o
+  SystemInit                 0x08000239          24      4  Code  Gb  system_stm32f4xx.o
+  TAMP_STAMP_IRQHandler      0x08002755                  2  Code  Wk  stm32f407xx_Vectors.o
+  TIM1_BRK_TIM9_IRQHandler   0x08002781                  2  Code  Wk  stm32f407xx_Vectors.o
+  TIM1_CC_IRQHandler         0x08002787                  2  Code  Wk  stm32f407xx_Vectors.o
+  TIM1_TRG_COM_TIM11_IRQHandler
+                             0x08002785                  2  Code  Wk  stm32f407xx_Vectors.o
+  TIM1_UP_TIM10_IRQHandler   0x08002783                  2  Code  Wk  stm32f407xx_Vectors.o
+  TIM2_IRQHandler            0x08002789                  2  Code  Wk  stm32f407xx_Vectors.o
+  TIM3_IRQHandler            0x0800278B                  2  Code  Wk  stm32f407xx_Vectors.o
+  TIM4_IRQHandler            0x0800278D                  2  Code  Wk  stm32f407xx_Vectors.o
+  TIM5_IRQHandler            0x080027B5                  2  Code  Wk  stm32f407xx_Vectors.o
+  TIM6_DAC_IRQHandler        0x080027BD                  2  Code  Wk  stm32f407xx_Vectors.o
+  TIM7_IRQHandler            0x080027BF                  2  Code  Wk  stm32f407xx_Vectors.o
+  TIM8_BRK_TIM12_IRQHandler  0x080027A7                  2  Code  Wk  stm32f407xx_Vectors.o
+  TIM8_CC_IRQHandler         0x080027AD                  2  Code  Wk  stm32f407xx_Vectors.o
+  TIM8_TRG_COM_TIM14_IRQHandler
+                             0x080027AB                  2  Code  Wk  stm32f407xx_Vectors.o
+  TIM8_UP_TIM13_IRQHandler   0x080027A9                  2  Code  Wk  stm32f407xx_Vectors.o
+  UART4_IRQHandler           0x080027B9                  2  Code  Wk  stm32f407xx_Vectors.o
+  UART5_IRQHandler           0x080027BB                  2  Code  Wk  stm32f407xx_Vectors.o
+  USART1_IRQHandler          0x0800279B                  2  Code  Wk  stm32f407xx_Vectors.o
+  USART2_IRQHandler          0x0800279D                  2  Code  Wk  stm32f407xx_Vectors.o
+  USART3_IRQHandler          0x0800279F                  2  Code  Wk  stm32f407xx_Vectors.o
+  USART6_IRQHandler          0x080027DF                  2  Code  Wk  stm32f407xx_Vectors.o
+  UsageFault_Handler         0x0800274D                  2  Code  Wk  stm32f407xx_Vectors.o
+  WWDG_IRQHandler            0x08002751                  2  Code  Wk  stm32f407xx_Vectors.o
+  __SEGGER_init_copy         0x08002B3B          20      2  Code  Wk  SEGGER_crtinit.o (SEGGER_crtinit_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+  __SEGGER_init_ctors        0x08002ACD          26      4  Code  Wk  SEGGER_crtinit.o (SEGGER_crtinit_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+  __SEGGER_init_done         0x0800206B                  4  Code  Gb  SEGGER_THUMB_Startup.o
+  __SEGGER_init_zero         0x08002B29          18      2  Code  Wk  SEGGER_crtinit.o (SEGGER_crtinit_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+  __aeabi_memclr             0x080020F9         104      4  Code  Wk  strasmops_arm.o (strops_unaligned_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+  __aeabi_memclr4            0x080020F9                  4  Code  Wk  strasmops_arm.o (strops_unaligned_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+  __aeabi_memclr8            0x080020F9                  4  Code  Wk  strasmops_arm.o (strops_unaligned_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+  __aeabi_memcpy             0x0800209D                  4  Code  Wk  strasmops_arm.o (strops_unaligned_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+  __aeabi_memcpy4            0x080020BB                  4  Code  Wk  strasmops_arm.o (strops_unaligned_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+  __aeabi_memcpy8            0x080020BB                  4  Code  Wk  strasmops_arm.o (strops_unaligned_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+  __aeabi_memset             0x080020FB                  4  Code  Wk  strasmops_arm.o (strops_unaligned_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+  __aeabi_memset4            0x080020FB                  4  Code  Wk  strasmops_arm.o (strops_unaligned_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+  __aeabi_memset8            0x080020FB                  4  Code  Wk  strasmops_arm.o (strops_unaligned_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+  __startup_complete         0x0800206B                  4  Code  Gb  SEGGER_THUMB_Startup.o
+  _start                     0x08002061          14      4  Code  Gb  SEGGER_THUMB_Startup.o
+  exit                       0x0800206F           2      4  Code  Gb  SEGGER_THUMB_Startup.o
+  main                       0x08001FE1         128      4  Code  Gb  main.o
+  memcpy                     0x0800209D          92      4  Code  Wk  strasmops_arm.o (strops_unaligned_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+  memset                     0x08002101                  4  Code  Wk  strasmops_arm.o (strops_unaligned_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+  prvAddCurrentTaskToDelayedList
+                             0x08001899         252      4  Code  Lc  tasks.o
+  prvAddNewTaskToReadyList   0x08000C91         292      4  Code  Lc  tasks.o
+  prvCheckForValidListAndQueue
+                             0x08001E41          84      4  Code  Lc  timers.o
+  prvCheckTasksWaitingTermination
+                             0x08002A0B           4      2  Code  Lc  tasks.o
+  prvCopyDataFromQueue       0x08002527          74      2  Code  Lc  queue.o
+  prvCopyDataToQueue         0x08002471         182      2  Code  Lc  queue.o
+  prvGetNextExpireTime       0x08001B81          60      4  Code  Lc  timers.o
+  prvIdleTask                0x080029FF          12      2  Code  Lc  tasks.o
+  prvInitialiseNewQueue      0x080022D1          62      2  Code  Lc  queue.o
+  prvInitialiseNewTask       0x080028FB         260      2  Code  Lc  tasks.o
+  prvInitialiseNewTimer      0x080026DD         110      2  Code  Lc  timers.o
+  prvInitialiseTaskLists     0x080017C5         116      4  Code  Lc  tasks.o
+  prvInsertTimerInActiveList
+                             0x08001BF9         132      4  Code  Lc  timers.o
+  prvIsQueueEmpty            0x0800261F          42      2  Code  Lc  queue.o
+  prvIsQueueFull             0x08002649          46      2  Code  Lc  queue.o
+  prvPortStartFirstTask      0x080003F9          42      4  Code  Lc  port.o
+  prvProcessExpiredTimer     0x08001A8D          92      4  Code  Lc  timers.o
+  prvProcessReceivedCommands
+                             0x08001C7D         380      4  Code  Lc  timers.o
+  prvProcessTimerOrBlockTask
+                             0x08001AE9         152      4  Code  Lc  timers.o
+  prvReloadTimer             0x08002A4F          64      2  Code  Lc  timers.o
+  prvResetNextTaskUnblockTime
+                             0x08001839          44      4  Code  Lc  tasks.o
+  prvSampleTimeNow           0x08001BBD          60      4  Code  Lc  timers.o
+  prvSwitchTimerLists        0x08001DF9          72      4  Code  Lc  timers.o
+  prvTaskExitError           0x080003A9          80      4  Code  Lc  port.o
+  prvTimerTask               0x08002A8F          32      2  Code  Lc  timers.o
+  prvUnlockQueue             0x08002571         174      2  Code  Lc  queue.o
+  pvPortMalloc               0x08000721         164      4  Code  Gb  heap_1.o
+  pxPortInitialiseStack      0x08000349          96      4  Code  Gb  port.o
+  reset_handler              0x08002AAF                  2  Code  Gb  STM32F4xx_Startup.o
+  uxListRemove               0x080021E9          74      2  Code  Gb  list.o
+  uxTaskGetNumberOfTasks     0x0800116D          12      4  Code  Gb  tasks.o
+  vLedOff                    0x08001EDD          28      4  Code  Gb  main.o
+  vListInitialise            0x080021B3          54      2  Code  Gb  list.o
+  vListInitialiseItem        0x080027F3          16      2  Code  Gb  list.o
+  vListInsert                0x08002803         104      2  Code  Gb  list.o
+  vPortEnableVFP             0x08000691          22      4  Code  Lc  port.o
+  vPortEnterCritical         0x08000571          88      4  Code  Gb  port.o
+  vPortExitCritical          0x080005C9          72      4  Code  Gb  port.o
+  vPortFree                  0x08002167          38      2  Code  Gb  heap_1.o
+  vPortSetupTimerInterrupt   0x08000655          60      4  Code  Wk  port.o
+  vPortValidateInterruptPriority
+                             0x080006A9         120      4  Code  Gb  port.o
+  vQueueWaitForMessageRestricted
+                             0x08002677         102      2  Code  Gb  queue.o
+  vTaskButton                0x08001EF9          96      4  Code  Gb  main.o
+  vTaskControl               0x08001F59         136      4  Code  Gb  main.o
+  vTaskInternalSetTimeOutState
+                             0x080016C9          36      4  Code  Gb  tasks.o
+  vTaskMissedYield           0x080017B5          16      4  Code  Gb  tasks.o
+  vTaskPlaceOnEventList      0x08001455          72      4  Code  Gb  tasks.o
+  vTaskPlaceOnEventListRestricted
+                             0x0800149D         136      4  Code  Gb  tasks.o
+  vTaskStartScheduler        0x08000EB1         160      4  Code  Gb  tasks.o
+  vTaskSuspendAll            0x08000F51          20      4  Code  Gb  tasks.o
+  vTaskSwitchContext         0x080013A5         176      4  Code  Gb  tasks.o
+  xPortStartScheduler        0x08000425         332      4  Code  Gb  port.o
+  xQueueGenericCreate        0x08002233         158      2  Code  Gb  queue.o
+  xQueueGenericReset         0x080007C5         284      4  Code  Gb  queue.o
+  xQueueGenericSend          0x080008E1         504      4  Code  Gb  queue.o
+  xQueueGenericSendFromISR   0x0800230F         354      2  Code  Gb  queue.o
+  xQueueReceive              0x08000AD9         440      4  Code  Gb  queue.o
+  xTaskCheckForTimeOut       0x080016ED         200      4  Code  Gb  tasks.o
+  xTaskCreate                0x0800286B         144      2  Code  Gb  tasks.o
+  xTaskDelayUntil            0x08000DB5         252      4  Code  Gb  tasks.o
+  xTaskGetSchedulerState     0x08001865          52      4  Code  Gb  tasks.o
+  xTaskGetTickCount          0x08001159          20      4  Code  Gb  tasks.o
+  xTaskIncrementTick         0x08001179         556      4  Code  Gb  tasks.o
+  xTaskRemoveFromEventList   0x08001525         420      4  Code  Gb  tasks.o
+  xTaskResumeAll             0x08000F65         500      4  Code  Gb  tasks.o
+  xTimerCreate               0x08002A0F          64      2  Code  Gb  timers.o
+  xTimerCreateTimerTask      0x08001995         100      4  Code  Gb  timers.o
+  xTimerGenericCommand       0x080019F9         148      4  Code  Gb  timers.o
+
+Function symbols by address:
+
+     Address  Symbol name                      Size  Align  Type  Bd  Object File
+  ----------  -------------------------  ----------  -----  ----  --  -----------
+  0x0800018D  NMI_Handler                                2  Code  Wk  stm32f407xx_Vectors.o
+  0x0800018F  MemManage_Handler                          2  Code  Wk  stm32f407xx_Vectors.o
+  0x08000191  SVC_Handler                        38     16  Code  Gb  port.o
+  0x080001C1  PendSV_Handler                    102     16  Code  Gb  port.o
+  0x08000239  SystemInit                         24      4  Code  Gb  system_stm32f4xx.o
+  0x08000251  SystemCoreClockUpdate             248      4  Code  Gb  system_stm32f4xx.o
+  0x08000349  pxPortInitialiseStack              96      4  Code  Gb  port.o
+  0x080003A9  prvTaskExitError                   80      4  Code  Lc  port.o
+  0x080003F9  prvPortStartFirstTask              42      4  Code  Lc  port.o
+  0x08000425  xPortStartScheduler               332      4  Code  Gb  port.o
+  0x08000571  vPortEnterCritical                 88      4  Code  Gb  port.o
+  0x080005C9  vPortExitCritical                  72      4  Code  Gb  port.o
+  0x08000611  SysTick_Handler                    68      4  Code  Gb  port.o
+  0x08000655  vPortSetupTimerInterrupt           60      4  Code  Wk  port.o
+  0x08000691  vPortEnableVFP                     22      4  Code  Lc  port.o
+  0x080006A9  vPortValidateInterruptPriority
+                                                120      4  Code  Gb  port.o
+  0x08000721  pvPortMalloc                      164      4  Code  Gb  heap_1.o
+  0x080007C5  xQueueGenericReset                284      4  Code  Gb  queue.o
+  0x080008E1  xQueueGenericSend                 504      4  Code  Gb  queue.o
+  0x08000AD9  xQueueReceive                     440      4  Code  Gb  queue.o
+  0x08000C91  prvAddNewTaskToReadyList          292      4  Code  Lc  tasks.o
+  0x08000DB5  xTaskDelayUntil                   252      4  Code  Gb  tasks.o
+  0x08000EB1  vTaskStartScheduler               160      4  Code  Gb  tasks.o
+  0x08000F51  vTaskSuspendAll                    20      4  Code  Gb  tasks.o
+  0x08000F65  xTaskResumeAll                    500      4  Code  Gb  tasks.o
+  0x08001159  xTaskGetTickCount                  20      4  Code  Gb  tasks.o
+  0x0800116D  uxTaskGetNumberOfTasks             12      4  Code  Gb  tasks.o
+  0x08001179  xTaskIncrementTick                556      4  Code  Gb  tasks.o
+  0x080013A5  vTaskSwitchContext                176      4  Code  Gb  tasks.o
+  0x08001455  vTaskPlaceOnEventList              72      4  Code  Gb  tasks.o
+  0x0800149D  vTaskPlaceOnEventListRestricted
+                                                136      4  Code  Gb  tasks.o
+  0x08001525  xTaskRemoveFromEventList          420      4  Code  Gb  tasks.o
+  0x080016C9  vTaskInternalSetTimeOutState
+                                                 36      4  Code  Gb  tasks.o
+  0x080016ED  xTaskCheckForTimeOut              200      4  Code  Gb  tasks.o
+  0x080017B5  vTaskMissedYield                   16      4  Code  Gb  tasks.o
+  0x080017C5  prvInitialiseTaskLists            116      4  Code  Lc  tasks.o
+  0x08001839  prvResetNextTaskUnblockTime
+                                                 44      4  Code  Lc  tasks.o
+  0x08001865  xTaskGetSchedulerState             52      4  Code  Gb  tasks.o
+  0x08001899  prvAddCurrentTaskToDelayedList
+                                                252      4  Code  Lc  tasks.o
+  0x08001995  xTimerCreateTimerTask             100      4  Code  Gb  timers.o
+  0x080019F9  xTimerGenericCommand              148      4  Code  Gb  timers.o
+  0x08001A8D  prvProcessExpiredTimer             92      4  Code  Lc  timers.o
+  0x08001AE9  prvProcessTimerOrBlockTask
+                                                152      4  Code  Lc  timers.o
+  0x08001B81  prvGetNextExpireTime               60      4  Code  Lc  timers.o
+  0x08001BBD  prvSampleTimeNow                   60      4  Code  Lc  timers.o
+  0x08001BF9  prvInsertTimerInActiveList
+                                                132      4  Code  Lc  timers.o
+  0x08001C7D  prvProcessReceivedCommands
+                                                380      4  Code  Lc  timers.o
+  0x08001DF9  prvSwitchTimerLists                72      4  Code  Lc  timers.o
+  0x08001E41  prvCheckForValidListAndQueue
+                                                 84      4  Code  Lc  timers.o
+  0x08001E95  GPIO_init                          72      4  Code  Gb  gpio.o
+  0x08001EDD  vLedOff                            28      4  Code  Gb  main.o
+  0x08001EF9  vTaskButton                        96      4  Code  Gb  main.o
+  0x08001F59  vTaskControl                      136      4  Code  Gb  main.o
+  0x08001FE1  main                              128      4  Code  Gb  main.o
+  0x08002061  _start                             14      4  Code  Gb  SEGGER_THUMB_Startup.o
+  0x0800206B  __startup_complete                         4  Code  Gb  SEGGER_THUMB_Startup.o
+  0x0800206B  __SEGGER_init_done                         4  Code  Gb  SEGGER_THUMB_Startup.o
+  0x0800206F  exit                                2      4  Code  Gb  SEGGER_THUMB_Startup.o
+  0x08002075  HardFault_Handler                          4  Code  Wk  STM32F4xx_Startup.o
+  0x0800209D  memcpy                             92      4  Code  Wk  strasmops_arm.o (strops_unaligned_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+  0x0800209D  __aeabi_memcpy                             4  Code  Wk  strasmops_arm.o (strops_unaligned_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+  0x080020BB  __aeabi_memcpy8                            4  Code  Wk  strasmops_arm.o (strops_unaligned_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+  0x080020BB  __aeabi_memcpy4                            4  Code  Wk  strasmops_arm.o (strops_unaligned_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+  0x080020F9  __aeabi_memclr8                            4  Code  Wk  strasmops_arm.o (strops_unaligned_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+  0x080020F9  __aeabi_memclr4                            4  Code  Wk  strasmops_arm.o (strops_unaligned_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+  0x080020F9  __aeabi_memclr                    104      4  Code  Wk  strasmops_arm.o (strops_unaligned_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+  0x080020FB  __aeabi_memset8                            4  Code  Wk  strasmops_arm.o (strops_unaligned_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+  0x080020FB  __aeabi_memset4                            4  Code  Wk  strasmops_arm.o (strops_unaligned_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+  0x080020FB  __aeabi_memset                             4  Code  Wk  strasmops_arm.o (strops_unaligned_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+  0x08002101  memset                                     4  Code  Wk  strasmops_arm.o (strops_unaligned_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+  0x08002167  vPortFree                          38      2  Code  Gb  heap_1.o
+  0x080021B3  vListInitialise                    54      2  Code  Gb  list.o
+  0x080021E9  uxListRemove                       74      2  Code  Gb  list.o
+  0x08002233  xQueueGenericCreate               158      2  Code  Gb  queue.o
+  0x080022D1  prvInitialiseNewQueue              62      2  Code  Lc  queue.o
+  0x0800230F  xQueueGenericSendFromISR          354      2  Code  Gb  queue.o
+  0x08002471  prvCopyDataToQueue                182      2  Code  Lc  queue.o
+  0x08002527  prvCopyDataFromQueue               74      2  Code  Lc  queue.o
+  0x08002571  prvUnlockQueue                    174      2  Code  Lc  queue.o
+  0x0800261F  prvIsQueueEmpty                    42      2  Code  Lc  queue.o
+  0x08002649  prvIsQueueFull                     46      2  Code  Lc  queue.o
+  0x08002677  vQueueWaitForMessageRestricted
+                                                102      2  Code  Gb  queue.o
+  0x080026DD  prvInitialiseNewTimer             110      2  Code  Lc  timers.o
+  0x0800274B  BusFault_Handler                           2  Code  Wk  stm32f407xx_Vectors.o
+  0x0800274D  UsageFault_Handler                         2  Code  Wk  stm32f407xx_Vectors.o
+  0x0800274F  DebugMon_Handler                           2  Code  Wk  stm32f407xx_Vectors.o
+  0x08002751  WWDG_IRQHandler                            2  Code  Wk  stm32f407xx_Vectors.o
+  0x08002753  PVD_IRQHandler                             2  Code  Wk  stm32f407xx_Vectors.o
+  0x08002755  TAMP_STAMP_IRQHandler                      2  Code  Wk  stm32f407xx_Vectors.o
+  0x08002757  RTC_WKUP_IRQHandler                        2  Code  Wk  stm32f407xx_Vectors.o
+  0x08002759  FLASH_IRQHandler                           2  Code  Wk  stm32f407xx_Vectors.o
+  0x0800275B  RCC_IRQHandler                             2  Code  Wk  stm32f407xx_Vectors.o
+  0x0800275D  EXTI0_IRQHandler                           2  Code  Wk  stm32f407xx_Vectors.o
+  0x0800275F  EXTI1_IRQHandler                           2  Code  Wk  stm32f407xx_Vectors.o
+  0x08002761  EXTI2_IRQHandler                           2  Code  Wk  stm32f407xx_Vectors.o
+  0x08002763  EXTI3_IRQHandler                           2  Code  Wk  stm32f407xx_Vectors.o
+  0x08002765  EXTI4_IRQHandler                           2  Code  Wk  stm32f407xx_Vectors.o
+  0x08002767  DMA1_Stream0_IRQHandler                    2  Code  Wk  stm32f407xx_Vectors.o
+  0x08002769  DMA1_Stream1_IRQHandler                    2  Code  Wk  stm32f407xx_Vectors.o
+  0x0800276B  DMA1_Stream2_IRQHandler                    2  Code  Wk  stm32f407xx_Vectors.o
+  0x0800276D  DMA1_Stream3_IRQHandler                    2  Code  Wk  stm32f407xx_Vectors.o
+  0x0800276F  DMA1_Stream4_IRQHandler                    2  Code  Wk  stm32f407xx_Vectors.o
+  0x08002771  DMA1_Stream5_IRQHandler                    2  Code  Wk  stm32f407xx_Vectors.o
+  0x08002773  DMA1_Stream6_IRQHandler                    2  Code  Wk  stm32f407xx_Vectors.o
+  0x08002775  ADC_IRQHandler                             2  Code  Wk  stm32f407xx_Vectors.o
+  0x08002777  CAN1_TX_IRQHandler                         2  Code  Wk  stm32f407xx_Vectors.o
+  0x08002779  CAN1_RX0_IRQHandler                        2  Code  Wk  stm32f407xx_Vectors.o
+  0x0800277B  CAN1_RX1_IRQHandler                        2  Code  Wk  stm32f407xx_Vectors.o
+  0x0800277D  CAN1_SCE_IRQHandler                        2  Code  Wk  stm32f407xx_Vectors.o
+  0x0800277F  EXTI9_5_IRQHandler                         2  Code  Wk  stm32f407xx_Vectors.o
+  0x08002781  TIM1_BRK_TIM9_IRQHandler                   2  Code  Wk  stm32f407xx_Vectors.o
+  0x08002783  TIM1_UP_TIM10_IRQHandler                   2  Code  Wk  stm32f407xx_Vectors.o
+  0x08002785  TIM1_TRG_COM_TIM11_IRQHandler
+                                                         2  Code  Wk  stm32f407xx_Vectors.o
+  0x08002787  TIM1_CC_IRQHandler                         2  Code  Wk  stm32f407xx_Vectors.o
+  0x08002789  TIM2_IRQHandler                            2  Code  Wk  stm32f407xx_Vectors.o
+  0x0800278B  TIM3_IRQHandler                            2  Code  Wk  stm32f407xx_Vectors.o
+  0x0800278D  TIM4_IRQHandler                            2  Code  Wk  stm32f407xx_Vectors.o
+  0x0800278F  I2C1_EV_IRQHandler                         2  Code  Wk  stm32f407xx_Vectors.o
+  0x08002791  I2C1_ER_IRQHandler                         2  Code  Wk  stm32f407xx_Vectors.o
+  0x08002793  I2C2_EV_IRQHandler                         2  Code  Wk  stm32f407xx_Vectors.o
+  0x08002795  I2C2_ER_IRQHandler                         2  Code  Wk  stm32f407xx_Vectors.o
+  0x08002797  SPI1_IRQHandler                            2  Code  Wk  stm32f407xx_Vectors.o
+  0x08002799  SPI2_IRQHandler                            2  Code  Wk  stm32f407xx_Vectors.o
+  0x0800279B  USART1_IRQHandler                          2  Code  Wk  stm32f407xx_Vectors.o
+  0x0800279D  USART2_IRQHandler                          2  Code  Wk  stm32f407xx_Vectors.o
+  0x0800279F  USART3_IRQHandler                          2  Code  Wk  stm32f407xx_Vectors.o
+  0x080027A1  EXTI15_10_IRQHandler                       2  Code  Wk  stm32f407xx_Vectors.o
+  0x080027A3  RTC_Alarm_IRQHandler                       2  Code  Wk  stm32f407xx_Vectors.o
+  0x080027A5  OTG_FS_WKUP_IRQHandler                     2  Code  Wk  stm32f407xx_Vectors.o
+  0x080027A7  TIM8_BRK_TIM12_IRQHandler                  2  Code  Wk  stm32f407xx_Vectors.o
+  0x080027A9  TIM8_UP_TIM13_IRQHandler                   2  Code  Wk  stm32f407xx_Vectors.o
+  0x080027AB  TIM8_TRG_COM_TIM14_IRQHandler
+                                                         2  Code  Wk  stm32f407xx_Vectors.o
+  0x080027AD  TIM8_CC_IRQHandler                         2  Code  Wk  stm32f407xx_Vectors.o
+  0x080027AF  DMA1_Stream7_IRQHandler                    2  Code  Wk  stm32f407xx_Vectors.o
+  0x080027B1  FSMC_IRQHandler                            2  Code  Wk  stm32f407xx_Vectors.o
+  0x080027B3  SDIO_IRQHandler                            2  Code  Wk  stm32f407xx_Vectors.o
+  0x080027B5  TIM5_IRQHandler                            2  Code  Wk  stm32f407xx_Vectors.o
+  0x080027B7  SPI3_IRQHandler                            2  Code  Wk  stm32f407xx_Vectors.o
+  0x080027B9  UART4_IRQHandler                           2  Code  Wk  stm32f407xx_Vectors.o
+  0x080027BB  UART5_IRQHandler                           2  Code  Wk  stm32f407xx_Vectors.o
+  0x080027BD  TIM6_DAC_IRQHandler                        2  Code  Wk  stm32f407xx_Vectors.o
+  0x080027BF  TIM7_IRQHandler                            2  Code  Wk  stm32f407xx_Vectors.o
+  0x080027C1  DMA2_Stream0_IRQHandler                    2  Code  Wk  stm32f407xx_Vectors.o
+  0x080027C3  DMA2_Stream1_IRQHandler                    2  Code  Wk  stm32f407xx_Vectors.o
+  0x080027C5  DMA2_Stream2_IRQHandler                    2  Code  Wk  stm32f407xx_Vectors.o
+  0x080027C7  DMA2_Stream3_IRQHandler                    2  Code  Wk  stm32f407xx_Vectors.o
+  0x080027C9  DMA2_Stream4_IRQHandler                    2  Code  Wk  stm32f407xx_Vectors.o
+  0x080027CB  ETH_IRQHandler                             2  Code  Wk  stm32f407xx_Vectors.o
+  0x080027CD  ETH_WKUP_IRQHandler                        2  Code  Wk  stm32f407xx_Vectors.o
+  0x080027CF  CAN2_TX_IRQHandler                         2  Code  Wk  stm32f407xx_Vectors.o
+  0x080027D1  CAN2_RX0_IRQHandler                        2  Code  Wk  stm32f407xx_Vectors.o
+  0x080027D3  CAN2_RX1_IRQHandler                        2  Code  Wk  stm32f407xx_Vectors.o
+  0x080027D5  CAN2_SCE_IRQHandler                        2  Code  Wk  stm32f407xx_Vectors.o
+  0x080027D7  OTG_FS_IRQHandler                          2  Code  Wk  stm32f407xx_Vectors.o
+  0x080027D9  DMA2_Stream5_IRQHandler                    2  Code  Wk  stm32f407xx_Vectors.o
+  0x080027DB  DMA2_Stream6_IRQHandler                    2  Code  Wk  stm32f407xx_Vectors.o
+  0x080027DD  DMA2_Stream7_IRQHandler                    2  Code  Wk  stm32f407xx_Vectors.o
+  0x080027DF  USART6_IRQHandler                          2  Code  Wk  stm32f407xx_Vectors.o
+  0x080027E1  I2C3_EV_IRQHandler                         2  Code  Wk  stm32f407xx_Vectors.o
+  0x080027E3  I2C3_ER_IRQHandler                         2  Code  Wk  stm32f407xx_Vectors.o
+  0x080027E5  OTG_HS_EP1_OUT_IRQHandler                  2  Code  Wk  stm32f407xx_Vectors.o
+  0x080027E7  OTG_HS_EP1_IN_IRQHandler                   2  Code  Wk  stm32f407xx_Vectors.o
+  0x080027E9  OTG_HS_WKUP_IRQHandler                     2  Code  Wk  stm32f407xx_Vectors.o
+  0x080027EB  OTG_HS_IRQHandler                          2  Code  Wk  stm32f407xx_Vectors.o
+  0x080027ED  DCMI_IRQHandler                            2  Code  Wk  stm32f407xx_Vectors.o
+  0x080027EF  HASH_RNG_IRQHandler                        2  Code  Wk  stm32f407xx_Vectors.o
+  0x080027F1  FPU_IRQHandler                             2  Code  Wk  stm32f407xx_Vectors.o
+  0x080027F3  vListInitialiseItem                16      2  Code  Gb  list.o
+  0x08002803  vListInsert                       104      2  Code  Gb  list.o
+  0x0800286B  xTaskCreate                       144      2  Code  Gb  tasks.o
+  0x080028FB  prvInitialiseNewTask              260      2  Code  Lc  tasks.o
+  0x080029FF  prvIdleTask                        12      2  Code  Lc  tasks.o
+  0x08002A0B  prvCheckTasksWaitingTermination
+                                                  4      2  Code  Lc  tasks.o
+  0x08002A0F  xTimerCreate                       64      2  Code  Gb  timers.o
+  0x08002A4F  prvReloadTimer                     64      2  Code  Lc  timers.o
+  0x08002A8F  prvTimerTask                       32      2  Code  Lc  timers.o
+  0x08002AAF  reset_handler                              2  Code  Gb  STM32F4xx_Startup.o
+  0x08002AAF  Reset_Handler                              2  Code  Gb  STM32F4xx_Startup.o
+  0x08002ACD  __SEGGER_init_ctors                26      4  Code  Wk  SEGGER_crtinit.o (SEGGER_crtinit_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+  0x08002B29  __SEGGER_init_zero                 18      2  Code  Wk  SEGGER_crtinit.o (SEGGER_crtinit_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+  0x08002B3B  __SEGGER_init_copy                 20      2  Code  Wk  SEGGER_crtinit.o (SEGGER_crtinit_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+
+Function symbols by descending size:
+
+  Symbol name                      Size  Align  Type  Bd  Object File
+  -------------------------  ----------  -----  ----  --  -----------
+  xTaskIncrementTick                556      4  Code  Gb  tasks.o
+  xQueueGenericSend                 504      4  Code  Gb  queue.o
+  xTaskResumeAll                    500      4  Code  Gb  tasks.o
+  xQueueReceive                     440      4  Code  Gb  queue.o
+  xTaskRemoveFromEventList          420      4  Code  Gb  tasks.o
+  prvProcessReceivedCommands
+                                    380      4  Code  Lc  timers.o
+  xQueueGenericSendFromISR          354      2  Code  Gb  queue.o
+  xPortStartScheduler               332      4  Code  Gb  port.o
+  prvAddNewTaskToReadyList          292      4  Code  Lc  tasks.o
+  xQueueGenericReset                284      4  Code  Gb  queue.o
+  prvInitialiseNewTask              260      2  Code  Lc  tasks.o
+  prvAddCurrentTaskToDelayedList
+                                    252      4  Code  Lc  tasks.o
+  xTaskDelayUntil                   252      4  Code  Gb  tasks.o
+  SystemCoreClockUpdate             248      4  Code  Gb  system_stm32f4xx.o
+  xTaskCheckForTimeOut              200      4  Code  Gb  tasks.o
+  prvCopyDataToQueue                182      2  Code  Lc  queue.o
+  vTaskSwitchContext                176      4  Code  Gb  tasks.o
+  prvUnlockQueue                    174      2  Code  Lc  queue.o
+  pvPortMalloc                      164      4  Code  Gb  heap_1.o
+  vTaskStartScheduler               160      4  Code  Gb  tasks.o
+  xQueueGenericCreate               158      2  Code  Gb  queue.o
+  prvProcessTimerOrBlockTask
+                                    152      4  Code  Lc  timers.o
+  xTimerGenericCommand              148      4  Code  Gb  timers.o
+  xTaskCreate                       144      2  Code  Gb  tasks.o
+  vTaskControl                      136      4  Code  Gb  main.o
+  vTaskPlaceOnEventListRestricted
+                                    136      4  Code  Gb  tasks.o
+  prvInsertTimerInActiveList
+                                    132      4  Code  Lc  timers.o
+  main                              128      4  Code  Gb  main.o
+  vPortValidateInterruptPriority
+                                    120      4  Code  Gb  port.o
+  prvInitialiseTaskLists            116      4  Code  Lc  tasks.o
+  prvInitialiseNewTimer             110      2  Code  Lc  timers.o
+  __aeabi_memclr                    104      4  Code  Wk  strasmops_arm.o (strops_unaligned_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+  vListInsert                       104      2  Code  Gb  list.o
+  PendSV_Handler                    102     16  Code  Gb  port.o
+  vQueueWaitForMessageRestricted
+                                    102      2  Code  Gb  queue.o
+  xTimerCreateTimerTask             100      4  Code  Gb  timers.o
+  pxPortInitialiseStack              96      4  Code  Gb  port.o
+  vTaskButton                        96      4  Code  Gb  main.o
+  memcpy                             92      4  Code  Wk  strasmops_arm.o (strops_unaligned_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+  prvProcessExpiredTimer             92      4  Code  Lc  timers.o
+  vPortEnterCritical                 88      4  Code  Gb  port.o
+  prvCheckForValidListAndQueue
+                                     84      4  Code  Lc  timers.o
+  prvTaskExitError                   80      4  Code  Lc  port.o
+  prvCopyDataFromQueue               74      2  Code  Lc  queue.o
+  uxListRemove                       74      2  Code  Gb  list.o
+  GPIO_init                          72      4  Code  Gb  gpio.o
+  prvSwitchTimerLists                72      4  Code  Lc  timers.o
+  vPortExitCritical                  72      4  Code  Gb  port.o
+  vTaskPlaceOnEventList              72      4  Code  Gb  tasks.o
+  SysTick_Handler                    68      4  Code  Gb  port.o
+  prvReloadTimer                     64      2  Code  Lc  timers.o
+  xTimerCreate                       64      2  Code  Gb  timers.o
+  prvInitialiseNewQueue              62      2  Code  Lc  queue.o
+  prvGetNextExpireTime               60      4  Code  Lc  timers.o
+  prvSampleTimeNow                   60      4  Code  Lc  timers.o
+  vPortSetupTimerInterrupt           60      4  Code  Wk  port.o
+  vListInitialise                    54      2  Code  Gb  list.o
+  xTaskGetSchedulerState             52      4  Code  Gb  tasks.o
+  prvIsQueueFull                     46      2  Code  Lc  queue.o
+  prvResetNextTaskUnblockTime
+                                     44      4  Code  Lc  tasks.o
+  prvIsQueueEmpty                    42      2  Code  Lc  queue.o
+  prvPortStartFirstTask              42      4  Code  Lc  port.o
+  SVC_Handler                        38     16  Code  Gb  port.o
+  vPortFree                          38      2  Code  Gb  heap_1.o
+  vTaskInternalSetTimeOutState
+                                     36      4  Code  Gb  tasks.o
+  prvTimerTask                       32      2  Code  Lc  timers.o
+  vLedOff                            28      4  Code  Gb  main.o
+  __SEGGER_init_ctors                26      4  Code  Wk  SEGGER_crtinit.o (SEGGER_crtinit_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+  SystemInit                         24      4  Code  Gb  system_stm32f4xx.o
+  vPortEnableVFP                     22      4  Code  Lc  port.o
+  __SEGGER_init_copy                 20      2  Code  Wk  SEGGER_crtinit.o (SEGGER_crtinit_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+  vTaskSuspendAll                    20      4  Code  Gb  tasks.o
+  xTaskGetTickCount                  20      4  Code  Gb  tasks.o
+  __SEGGER_init_zero                 18      2  Code  Wk  SEGGER_crtinit.o (SEGGER_crtinit_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+  vListInitialiseItem                16      2  Code  Gb  list.o
+  vTaskMissedYield                   16      4  Code  Gb  tasks.o
+  _start                             14      4  Code  Gb  SEGGER_THUMB_Startup.o
+  prvIdleTask                        12      2  Code  Lc  tasks.o
+  uxTaskGetNumberOfTasks             12      4  Code  Gb  tasks.o
+  prvCheckTasksWaitingTermination
+                                      4      2  Code  Lc  tasks.o
+  exit                                2      4  Code  Gb  SEGGER_THUMB_Startup.o
+  ADC_IRQHandler                             2  Code  Wk  stm32f407xx_Vectors.o
+  BusFault_Handler                           2  Code  Wk  stm32f407xx_Vectors.o
+  CAN1_RX0_IRQHandler                        2  Code  Wk  stm32f407xx_Vectors.o
+  CAN1_RX1_IRQHandler                        2  Code  Wk  stm32f407xx_Vectors.o
+  CAN1_SCE_IRQHandler                        2  Code  Wk  stm32f407xx_Vectors.o
+  CAN1_TX_IRQHandler                         2  Code  Wk  stm32f407xx_Vectors.o
+  CAN2_RX0_IRQHandler                        2  Code  Wk  stm32f407xx_Vectors.o
+  CAN2_RX1_IRQHandler                        2  Code  Wk  stm32f407xx_Vectors.o
+  CAN2_SCE_IRQHandler                        2  Code  Wk  stm32f407xx_Vectors.o
+  CAN2_TX_IRQHandler                         2  Code  Wk  stm32f407xx_Vectors.o
+  DCMI_IRQHandler                            2  Code  Wk  stm32f407xx_Vectors.o
+  DMA1_Stream0_IRQHandler                    2  Code  Wk  stm32f407xx_Vectors.o
+  DMA1_Stream1_IRQHandler                    2  Code  Wk  stm32f407xx_Vectors.o
+  DMA1_Stream2_IRQHandler                    2  Code  Wk  stm32f407xx_Vectors.o
+  DMA1_Stream3_IRQHandler                    2  Code  Wk  stm32f407xx_Vectors.o
+  DMA1_Stream4_IRQHandler                    2  Code  Wk  stm32f407xx_Vectors.o
+  DMA1_Stream5_IRQHandler                    2  Code  Wk  stm32f407xx_Vectors.o
+  DMA1_Stream6_IRQHandler                    2  Code  Wk  stm32f407xx_Vectors.o
+  DMA1_Stream7_IRQHandler                    2  Code  Wk  stm32f407xx_Vectors.o
+  DMA2_Stream0_IRQHandler                    2  Code  Wk  stm32f407xx_Vectors.o
+  DMA2_Stream1_IRQHandler                    2  Code  Wk  stm32f407xx_Vectors.o
+  DMA2_Stream2_IRQHandler                    2  Code  Wk  stm32f407xx_Vectors.o
+  DMA2_Stream3_IRQHandler                    2  Code  Wk  stm32f407xx_Vectors.o
+  DMA2_Stream4_IRQHandler                    2  Code  Wk  stm32f407xx_Vectors.o
+  DMA2_Stream5_IRQHandler                    2  Code  Wk  stm32f407xx_Vectors.o
+  DMA2_Stream6_IRQHandler                    2  Code  Wk  stm32f407xx_Vectors.o
+  DMA2_Stream7_IRQHandler                    2  Code  Wk  stm32f407xx_Vectors.o
+  DebugMon_Handler                           2  Code  Wk  stm32f407xx_Vectors.o
+  ETH_IRQHandler                             2  Code  Wk  stm32f407xx_Vectors.o
+  ETH_WKUP_IRQHandler                        2  Code  Wk  stm32f407xx_Vectors.o
+  EXTI0_IRQHandler                           2  Code  Wk  stm32f407xx_Vectors.o
+  EXTI15_10_IRQHandler                       2  Code  Wk  stm32f407xx_Vectors.o
+  EXTI1_IRQHandler                           2  Code  Wk  stm32f407xx_Vectors.o
+  EXTI2_IRQHandler                           2  Code  Wk  stm32f407xx_Vectors.o
+  EXTI3_IRQHandler                           2  Code  Wk  stm32f407xx_Vectors.o
+  EXTI4_IRQHandler                           2  Code  Wk  stm32f407xx_Vectors.o
+  EXTI9_5_IRQHandler                         2  Code  Wk  stm32f407xx_Vectors.o
+  FLASH_IRQHandler                           2  Code  Wk  stm32f407xx_Vectors.o
+  FPU_IRQHandler                             2  Code  Wk  stm32f407xx_Vectors.o
+  FSMC_IRQHandler                            2  Code  Wk  stm32f407xx_Vectors.o
+  HASH_RNG_IRQHandler                        2  Code  Wk  stm32f407xx_Vectors.o
+  HardFault_Handler                          4  Code  Wk  STM32F4xx_Startup.o
+  I2C1_ER_IRQHandler                         2  Code  Wk  stm32f407xx_Vectors.o
+  I2C1_EV_IRQHandler                         2  Code  Wk  stm32f407xx_Vectors.o
+  I2C2_ER_IRQHandler                         2  Code  Wk  stm32f407xx_Vectors.o
+  I2C2_EV_IRQHandler                         2  Code  Wk  stm32f407xx_Vectors.o
+  I2C3_ER_IRQHandler                         2  Code  Wk  stm32f407xx_Vectors.o
+  I2C3_EV_IRQHandler                         2  Code  Wk  stm32f407xx_Vectors.o
+  MemManage_Handler                          2  Code  Wk  stm32f407xx_Vectors.o
+  NMI_Handler                                2  Code  Wk  stm32f407xx_Vectors.o
+  OTG_FS_IRQHandler                          2  Code  Wk  stm32f407xx_Vectors.o
+  OTG_FS_WKUP_IRQHandler                     2  Code  Wk  stm32f407xx_Vectors.o
+  OTG_HS_EP1_IN_IRQHandler                   2  Code  Wk  stm32f407xx_Vectors.o
+  OTG_HS_EP1_OUT_IRQHandler                  2  Code  Wk  stm32f407xx_Vectors.o
+  OTG_HS_IRQHandler                          2  Code  Wk  stm32f407xx_Vectors.o
+  OTG_HS_WKUP_IRQHandler                     2  Code  Wk  stm32f407xx_Vectors.o
+  PVD_IRQHandler                             2  Code  Wk  stm32f407xx_Vectors.o
+  RCC_IRQHandler                             2  Code  Wk  stm32f407xx_Vectors.o
+  RTC_Alarm_IRQHandler                       2  Code  Wk  stm32f407xx_Vectors.o
+  RTC_WKUP_IRQHandler                        2  Code  Wk  stm32f407xx_Vectors.o
+  Reset_Handler                              2  Code  Gb  STM32F4xx_Startup.o
+  SDIO_IRQHandler                            2  Code  Wk  stm32f407xx_Vectors.o
+  SPI1_IRQHandler                            2  Code  Wk  stm32f407xx_Vectors.o
+  SPI2_IRQHandler                            2  Code  Wk  stm32f407xx_Vectors.o
+  SPI3_IRQHandler                            2  Code  Wk  stm32f407xx_Vectors.o
+  TAMP_STAMP_IRQHandler                      2  Code  Wk  stm32f407xx_Vectors.o
+  TIM1_BRK_TIM9_IRQHandler                   2  Code  Wk  stm32f407xx_Vectors.o
+  TIM1_CC_IRQHandler                         2  Code  Wk  stm32f407xx_Vectors.o
+  TIM1_TRG_COM_TIM11_IRQHandler
+                                             2  Code  Wk  stm32f407xx_Vectors.o
+  TIM1_UP_TIM10_IRQHandler                   2  Code  Wk  stm32f407xx_Vectors.o
+  TIM2_IRQHandler                            2  Code  Wk  stm32f407xx_Vectors.o
+  TIM3_IRQHandler                            2  Code  Wk  stm32f407xx_Vectors.o
+  TIM4_IRQHandler                            2  Code  Wk  stm32f407xx_Vectors.o
+  TIM5_IRQHandler                            2  Code  Wk  stm32f407xx_Vectors.o
+  TIM6_DAC_IRQHandler                        2  Code  Wk  stm32f407xx_Vectors.o
+  TIM7_IRQHandler                            2  Code  Wk  stm32f407xx_Vectors.o
+  TIM8_BRK_TIM12_IRQHandler                  2  Code  Wk  stm32f407xx_Vectors.o
+  TIM8_CC_IRQHandler                         2  Code  Wk  stm32f407xx_Vectors.o
+  TIM8_TRG_COM_TIM14_IRQHandler
+                                             2  Code  Wk  stm32f407xx_Vectors.o
+  TIM8_UP_TIM13_IRQHandler                   2  Code  Wk  stm32f407xx_Vectors.o
+  UART4_IRQHandler                           2  Code  Wk  stm32f407xx_Vectors.o
+  UART5_IRQHandler                           2  Code  Wk  stm32f407xx_Vectors.o
+  USART1_IRQHandler                          2  Code  Wk  stm32f407xx_Vectors.o
+  USART2_IRQHandler                          2  Code  Wk  stm32f407xx_Vectors.o
+  USART3_IRQHandler                          2  Code  Wk  stm32f407xx_Vectors.o
+  USART6_IRQHandler                          2  Code  Wk  stm32f407xx_Vectors.o
+  UsageFault_Handler                         2  Code  Wk  stm32f407xx_Vectors.o
+  WWDG_IRQHandler                            2  Code  Wk  stm32f407xx_Vectors.o
+  __SEGGER_init_done                         4  Code  Gb  SEGGER_THUMB_Startup.o
+  __aeabi_memclr4                            4  Code  Wk  strasmops_arm.o (strops_unaligned_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+  __aeabi_memclr8                            4  Code  Wk  strasmops_arm.o (strops_unaligned_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+  __aeabi_memcpy                             4  Code  Wk  strasmops_arm.o (strops_unaligned_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+  __aeabi_memcpy4                            4  Code  Wk  strasmops_arm.o (strops_unaligned_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+  __aeabi_memcpy8                            4  Code  Wk  strasmops_arm.o (strops_unaligned_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+  __aeabi_memset                             4  Code  Wk  strasmops_arm.o (strops_unaligned_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+  __aeabi_memset4                            4  Code  Wk  strasmops_arm.o (strops_unaligned_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+  __aeabi_memset8                            4  Code  Wk  strasmops_arm.o (strops_unaligned_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+  __startup_complete                         4  Code  Gb  SEGGER_THUMB_Startup.o
+  memset                                     4  Code  Wk  strasmops_arm.o (strops_unaligned_v7em_fpv4_sp_d16_hard_t_le_eabi_balanced.a)
+  reset_handler                              2  Code  Gb  STM32F4xx_Startup.o
+
+Read-write data symbols by name:
+
+  Symbol name                   Address        Size  Align  Type  Bd  Object File
+  -------------------------  ----------  ----------  -----  ----  --  -----------
+  SystemCoreClock            0x1000011C           4      4  Init  Gb  system_stm32f4xx.o
+  myQueue                    0x10000110           4      4  Zero  Gb  main.o
+  pucAlignedHeap.0           0x1000010C           4      4  Zero  Lc  heap_1.o
+  pulseLedOff                0x10000108           4      4  Zero  Gb  main.o
+  pxCurrentTCB               0x10000104           4      4  Zero  Gb  tasks.o
+  pxCurrentTimerList         0x10000100           4      4  Zero  Lc  timers.o
+  pxDelayedTaskList          0x100000FC           4      4  Zero  Lc  tasks.o
+  pxOverflowDelayedTaskList  0x100000F8           4      4  Zero  Lc  tasks.o
+  pxOverflowTimerList        0x100000F4           4      4  Zero  Lc  timers.o
+  pxReadyTasksLists          0x10000000          60      4  Zero  Lc  tasks.o
+  ucHeap                     0x20000000      76 800      4  Zero  Lc  heap_1.o
+  ucMaxSysCallPriority       0x10000114           1         Zero  Lc  port.o
+  ulMaxPRIGROUPValue         0x100000F0           4      4  Zero  Lc  port.o
+  uxCriticalNesting          0x10000118           4      4  Init  Lc  port.o
+  uxCurrentNumberOfTasks     0x100000EC           4      4  Zero  Lc  tasks.o
+  uxSchedulerSuspended       0x100000E8           4      4  Zero  Lc  tasks.o
+  uxTaskNumber               0x100000E4           4      4  Zero  Lc  tasks.o
+  uxTopReadyPriority         0x100000E0           4      4  Zero  Lc  tasks.o
+  xActiveTimerList1          0x100000A0          20      4  Zero  Lc  timers.o
+  xActiveTimerList2          0x1000008C          20      4  Zero  Lc  timers.o
+  xDelayedTaskList1          0x10000078          20      4  Zero  Lc  tasks.o
+  xDelayedTaskList2          0x10000064          20      4  Zero  Lc  tasks.o
+  xIdleTaskHandle            0x100000DC           4      4  Zero  Lc  tasks.o
+  xLastTime.0                0x100000D8           4      4  Zero  Lc  timers.o
+  xNextFreeByte              0x100000D4           4      4  Zero  Lc  heap_1.o
+  xNextTaskUnblockTime       0x100000D0           4      4  Zero  Lc  tasks.o
+  xNumOfOverflows            0x100000CC           4      4  Zero  Lc  tasks.o
+  xPendedTicks               0x100000C8           4      4  Zero  Lc  tasks.o
+  xPendingReadyList          0x10000050          20      4  Zero  Lc  tasks.o
+  xSchedulerRunning          0x100000C4           4      4  Zero  Lc  tasks.o
+  xSuspendedTaskList         0x1000003C          20      4  Zero  Lc  tasks.o
+  xTickCount                 0x100000C0           4      4  Zero  Lc  tasks.o
+  xTimerQueue                0x100000BC           4      4  Zero  Lc  timers.o
+  xTimerTaskHandle           0x100000B8           4      4  Zero  Lc  timers.o
+  xYieldPending              0x100000B4           4      4  Zero  Lc  tasks.o
+
+Read-write data symbols by address:
+
+     Address  Symbol name                      Size  Align  Type  Bd  Object File
+  ----------  -------------------------  ----------  -----  ----  --  -----------
+  0x10000000  pxReadyTasksLists                  60      4  Zero  Lc  tasks.o
+  0x1000003C  xSuspendedTaskList                 20      4  Zero  Lc  tasks.o
+  0x10000050  xPendingReadyList                  20      4  Zero  Lc  tasks.o
+  0x10000064  xDelayedTaskList2                  20      4  Zero  Lc  tasks.o
+  0x10000078  xDelayedTaskList1                  20      4  Zero  Lc  tasks.o
+  0x1000008C  xActiveTimerList2                  20      4  Zero  Lc  timers.o
+  0x100000A0  xActiveTimerList1                  20      4  Zero  Lc  timers.o
+  0x100000B4  xYieldPending                       4      4  Zero  Lc  tasks.o
+  0x100000B8  xTimerTaskHandle                    4      4  Zero  Lc  timers.o
+  0x100000BC  xTimerQueue                         4      4  Zero  Lc  timers.o
+  0x100000C0  xTickCount                          4      4  Zero  Lc  tasks.o
+  0x100000C4  xSchedulerRunning                   4      4  Zero  Lc  tasks.o
+  0x100000C8  xPendedTicks                        4      4  Zero  Lc  tasks.o
+  0x100000CC  xNumOfOverflows                     4      4  Zero  Lc  tasks.o
+  0x100000D0  xNextTaskUnblockTime                4      4  Zero  Lc  tasks.o
+  0x100000D4  xNextFreeByte                       4      4  Zero  Lc  heap_1.o
+  0x100000D8  xLastTime.0                         4      4  Zero  Lc  timers.o
+  0x100000DC  xIdleTaskHandle                     4      4  Zero  Lc  tasks.o
+  0x100000E0  uxTopReadyPriority                  4      4  Zero  Lc  tasks.o
+  0x100000E4  uxTaskNumber                        4      4  Zero  Lc  tasks.o
+  0x100000E8  uxSchedulerSuspended                4      4  Zero  Lc  tasks.o
+  0x100000EC  uxCurrentNumberOfTasks              4      4  Zero  Lc  tasks.o
+  0x100000F0  ulMaxPRIGROUPValue                  4      4  Zero  Lc  port.o
+  0x100000F4  pxOverflowTimerList                 4      4  Zero  Lc  timers.o
+  0x100000F8  pxOverflowDelayedTaskList           4      4  Zero  Lc  tasks.o
+  0x100000FC  pxDelayedTaskList                   4      4  Zero  Lc  tasks.o
+  0x10000100  pxCurrentTimerList                  4      4  Zero  Lc  timers.o
+  0x10000104  pxCurrentTCB                        4      4  Zero  Gb  tasks.o
+  0x10000108  pulseLedOff                         4      4  Zero  Gb  main.o
+  0x1000010C  pucAlignedHeap.0                    4      4  Zero  Lc  heap_1.o
+  0x10000110  myQueue                             4      4  Zero  Gb  main.o
+  0x10000114  ucMaxSysCallPriority                1         Zero  Lc  port.o
+  0x10000118  uxCriticalNesting                   4      4  Init  Lc  port.o
+  0x1000011C  SystemCoreClock                     4      4  Init  Gb  system_stm32f4xx.o
+  0x20000000  ucHeap                         76 800      4  Zero  Lc  heap_1.o
+
+Read-write data symbols by descending size:
+
+  Symbol name                      Size  Align  Type  Bd  Object File
+  -------------------------  ----------  -----  ----  --  -----------
+  ucHeap                         76 800      4  Zero  Lc  heap_1.o
+  pxReadyTasksLists                  60      4  Zero  Lc  tasks.o
+  xActiveTimerList1                  20      4  Zero  Lc  timers.o
+  xActiveTimerList2                  20      4  Zero  Lc  timers.o
+  xDelayedTaskList1                  20      4  Zero  Lc  tasks.o
+  xDelayedTaskList2                  20      4  Zero  Lc  tasks.o
+  xPendingReadyList                  20      4  Zero  Lc  tasks.o
+  xSuspendedTaskList                 20      4  Zero  Lc  tasks.o
+  SystemCoreClock                     4      4  Init  Gb  system_stm32f4xx.o
+  myQueue                             4      4  Zero  Gb  main.o
+  pucAlignedHeap.0                    4      4  Zero  Lc  heap_1.o
+  pulseLedOff                         4      4  Zero  Gb  main.o
+  pxCurrentTCB                        4      4  Zero  Gb  tasks.o
+  pxCurrentTimerList                  4      4  Zero  Lc  timers.o
+  pxDelayedTaskList                   4      4  Zero  Lc  tasks.o
+  pxOverflowDelayedTaskList           4      4  Zero  Lc  tasks.o
+  pxOverflowTimerList                 4      4  Zero  Lc  timers.o
+  ulMaxPRIGROUPValue                  4      4  Zero  Lc  port.o
+  uxCriticalNesting                   4      4  Init  Lc  port.o
+  uxCurrentNumberOfTasks              4      4  Zero  Lc  tasks.o
+  uxSchedulerSuspended                4      4  Zero  Lc  tasks.o
+  uxTaskNumber                        4      4  Zero  Lc  tasks.o
+  uxTopReadyPriority                  4      4  Zero  Lc  tasks.o
+  xIdleTaskHandle                     4      4  Zero  Lc  tasks.o
+  xLastTime.0                         4      4  Zero  Lc  timers.o
+  xNextFreeByte                       4      4  Zero  Lc  heap_1.o
+  xNextTaskUnblockTime                4      4  Zero  Lc  tasks.o
+  xNumOfOverflows                     4      4  Zero  Lc  tasks.o
+  xPendedTicks                        4      4  Zero  Lc  tasks.o
+  xSchedulerRunning                   4      4  Zero  Lc  tasks.o
+  xTickCount                          4      4  Zero  Lc  tasks.o
+  xTimerQueue                         4      4  Zero  Lc  timers.o
+  xTimerTaskHandle                    4      4  Zero  Lc  timers.o
+  xYieldPending                       4      4  Zero  Lc  tasks.o
+  ucMaxSysCallPriority                1         Zero  Lc  port.o
+
+Read-only data symbols by name:
+
+  Symbol name                   Address        Size  Align  Type  Bd  Object File
+  -------------------------  ----------  ----------  -----  ----  --  -----------
+  AHBPrescTable              0x08000228          16      4  Cnst  Gb  system_stm32f4xx.o
+  __SEGGER_init_data__       0x08002B20         [8]      4  Cnst  Lc  [ Linker created ]
+  __SEGGER_init_table__      0x08002AF0        [48]      4  Cnst  Lc  [ Linker created ]
+  uxTopUsedPriority          0x08000188           4      4  Cnst  Gb  tasks.o
+
+Read-only data symbols by address:
+
+     Address  Symbol name                      Size  Align  Type  Bd  Object File
+  ----------  -------------------------  ----------  -----  ----  --  -----------
+  0x08000188  uxTopUsedPriority                   4      4  Cnst  Gb  tasks.o
+  0x08000228  AHBPrescTable                      16      4  Cnst  Gb  system_stm32f4xx.o
+  0x08002AF0  __SEGGER_init_table__            [48]      4  Cnst  Lc  [ Linker created ]
+  0x08002B20  __SEGGER_init_data__              [8]      4  Cnst  Lc  [ Linker created ]
+
+Untyped symbols by name:
+
+  Symbol name                     Value        Size  Align  Type  Bd  Object File
+  -------------------------  ----------  ----------  -----  ----  --  -----------
+  __CCM_RAM1_segment_end__   0x10010000                     ----  Gb  [ Linker created ]
+  __CCM_RAM1_segment_size__  0x00010000                     ----  Gb  [ Linker created ]
+  __CCM_RAM1_segment_start__
+                             0x10000000                     ----  Gb  [ Linker created ]
+  __CCM_RAM1_segment_used_end__
+                             0x10000120                     ----  Gb  [ Linker created ]
+  __CCM_RAM1_segment_used_size__
+                             0x00000120                     ----  Gb  [ Linker created ]
+  __CCM_RAM1_segment_used_start__
+                             0x10000000                     ----  Gb  [ Linker created ]
+  __DATA_RAM_segment_end__   0x20020000                     ----  Gb  [ Linker created ]
+  __DATA_RAM_segment_size__  0x10020000                     ----  Gb  [ Linker created ]
+  __DATA_RAM_segment_start__
+                             0x10000000                     ----  Gb  [ Linker created ]
+  __DATA_RAM_segment_used_end__
+                             0x20020000                     ----  Gb  [ Linker created ]
+  __DATA_RAM_segment_used_size__
+                             0x10020000                     ----  Gb  [ Linker created ]
+  __DATA_RAM_segment_used_start__
+                             0x10000000                     ----  Gb  [ Linker created ]
+  __FLASH1_segment_end__     0x08080000                     ----  Gb  [ Linker created ]
+  __FLASH1_segment_size__    0x00080000                     ----  Gb  [ Linker created ]
+  __FLASH1_segment_start__   0x08000000                     ----  Gb  [ Linker created ]
+  __FLASH1_segment_used_end__
+                             0x08002B4E                     ----  Gb  [ Linker created ]
+  __FLASH1_segment_used_size__
+                             0x00002B4E                     ----  Gb  [ Linker created ]
+  __FLASH1_segment_used_start__
+                             0x08000000                     ----  Gb  [ Linker created ]
+  __FLASH_segment_end__      0x08080000                     ----  Gb  [ Linker created ]
+  __FLASH_segment_size__     0x00080000                     ----  Gb  [ Linker created ]
+  __FLASH_segment_start__    0x08000000                     ----  Gb  [ Linker created ]
+  __FLASH_segment_used_end__
+                             0x08002B4E                     ----  Gb  [ Linker created ]
+  __FLASH_segment_used_size__
+                             0x00002B4E                     ----  Gb  [ Linker created ]
+  __FLASH_segment_used_start__
+                             0x08000000                     ----  Gb  [ Linker created ]
+  __HEAPSIZE__               0x00000400                     ----  Gb  [ Linker created ]
+  __INST_RAM_segment_end__   0x20020000                     ----  Gb  [ Linker created ]
+  __INST_RAM_segment_size__  0x00020000                     ----  Gb  [ Linker created ]
+  __INST_RAM_segment_start__
+                             0x20000000                     ----  Gb  [ Linker created ]
+  __INST_RAM_segment_used_end__
+                             0x20020000                     ----  Gb  [ Linker created ]
+  __INST_RAM_segment_used_size__
+                             0x00020000                     ----  Gb  [ Linker created ]
+  __INST_RAM_segment_used_start__
+                             0x20000000                     ----  Gb  [ Linker created ]
+  __RAM1_segment_end__       0x20020000                     ----  Gb  [ Linker created ]
+  __RAM1_segment_size__      0x00020000                     ----  Gb  [ Linker created ]
+  __RAM1_segment_start__     0x20000000                     ----  Gb  [ Linker created ]
+  __RAM1_segment_used_end__  0x20020000                     ----  Gb  [ Linker created ]
+  __RAM1_segment_used_size__
+                             0x00020000                     ----  Gb  [ Linker created ]
+  __RAM1_segment_used_start__
+                             0x20000000                     ----  Gb  [ Linker created ]
+  __STACKSIZE_PROCESS__      0x00000000                     ----  Gb  [ Linker created ]
+  __STACKSIZE__              0x00000800                     ----  Gb  [ Linker created ]
+  __ctors_end__              0x08002ACC                     ----  Gb  [ Linker created ]
+  __ctors_start__            0x08002AC8                     ----  Gb  [ Linker created ]
+  __stack_end__              0x20020000                     ----  Gb  [ Linker created ]
+  __thread_pointer$          0x00000000                     ----  Gb  [ Linker created ]
+  _vectors                   0x08000000       [392]    512  Code  Gb  stm32f407xx_Vectors.o
+  _vectors_end               0x08000188                512  Code  Lc  stm32f407xx_Vectors.o
+  pxCurrentTCBConst          0x08000220                 16  Code  Lc  port.o
+  pxCurrentTCBConst2         0x080001B0                 16  Code  Lc  port.o
+
+Untyped symbols by address:
+
+       Value  Symbol name                      Size  Align  Type  Bd  Object File
+  ----------  -------------------------  ----------  -----  ----  --  -----------
+  0x00000000  __thread_pointer$                             ----  Gb  [ Linker created ]
+  0x00000000  __STACKSIZE_PROCESS__                         ----  Gb  [ Linker created ]
+  0x00000120  __CCM_RAM1_segment_used_size__
+                                                            ----  Gb  [ Linker created ]
+  0x00000400  __HEAPSIZE__                                  ----  Gb  [ Linker created ]
+  0x00000800  __STACKSIZE__                                 ----  Gb  [ Linker created ]
+  0x00002B4E  __FLASH_segment_used_size__
+                                                            ----  Gb  [ Linker created ]
+  0x00002B4E  __FLASH1_segment_used_size__
+                                                            ----  Gb  [ Linker created ]
+  0x00010000  __CCM_RAM1_segment_size__                     ----  Gb  [ Linker created ]
+  0x00020000  __RAM1_segment_used_size__
+                                                            ----  Gb  [ Linker created ]
+  0x00020000  __RAM1_segment_size__                         ----  Gb  [ Linker created ]
+  0x00020000  __INST_RAM_segment_used_size__
+                                                            ----  Gb  [ Linker created ]
+  0x00020000  __INST_RAM_segment_size__                     ----  Gb  [ Linker created ]
+  0x00080000  __FLASH_segment_size__                        ----  Gb  [ Linker created ]
+  0x00080000  __FLASH1_segment_size__                       ----  Gb  [ Linker created ]
+  0x08000000  _vectors                        [392]    512  Code  Gb  stm32f407xx_Vectors.o
+  0x08000000  __FLASH_segment_used_start__
+                                                            ----  Gb  [ Linker created ]
+  0x08000000  __FLASH_segment_start__                       ----  Gb  [ Linker created ]
+  0x08000000  __FLASH1_segment_used_start__
+                                                            ----  Gb  [ Linker created ]
+  0x08000000  __FLASH1_segment_start__                      ----  Gb  [ Linker created ]
+  0x08000188  _vectors_end                             512  Code  Lc  stm32f407xx_Vectors.o
+  0x080001B0  pxCurrentTCBConst2                        16  Code  Lc  port.o
+  0x08000220  pxCurrentTCBConst                         16  Code  Lc  port.o
+  0x08002AC8  __ctors_start__                               ----  Gb  [ Linker created ]
+  0x08002ACC  __ctors_end__                                 ----  Gb  [ Linker created ]
+  0x08002B4E  __FLASH_segment_used_end__
+                                                            ----  Gb  [ Linker created ]
+  0x08002B4E  __FLASH1_segment_used_end__
+                                                            ----  Gb  [ Linker created ]
+  0x08080000  __FLASH_segment_end__                         ----  Gb  [ Linker created ]
+  0x08080000  __FLASH1_segment_end__                        ----  Gb  [ Linker created ]
+  0x10000000  __DATA_RAM_segment_used_start__
+                                                            ----  Gb  [ Linker created ]
+  0x10000000  __DATA_RAM_segment_start__
+                                                            ----  Gb  [ Linker created ]
+  0x10000000  __CCM_RAM1_segment_used_start__
+                                                            ----  Gb  [ Linker created ]
+  0x10000000  __CCM_RAM1_segment_start__
+                                                            ----  Gb  [ Linker created ]
+  0x10000120  __CCM_RAM1_segment_used_end__
+                                                            ----  Gb  [ Linker created ]
+  0x10010000  __CCM_RAM1_segment_end__                      ----  Gb  [ Linker created ]
+  0x10020000  __DATA_RAM_segment_used_size__
+                                                            ----  Gb  [ Linker created ]
+  0x10020000  __DATA_RAM_segment_size__                     ----  Gb  [ Linker created ]
+  0x20000000  __RAM1_segment_used_start__
+                                                            ----  Gb  [ Linker created ]
+  0x20000000  __RAM1_segment_start__                        ----  Gb  [ Linker created ]
+  0x20000000  __INST_RAM_segment_used_start__
+                                                            ----  Gb  [ Linker created ]
+  0x20000000  __INST_RAM_segment_start__
+                                                            ----  Gb  [ Linker created ]
+  0x20020000  __stack_end__                                 ----  Gb  [ Linker created ]
+  0x20020000  __RAM1_segment_used_end__                     ----  Gb  [ Linker created ]
+  0x20020000  __RAM1_segment_end__                          ----  Gb  [ Linker created ]
+  0x20020000  __INST_RAM_segment_used_end__
+                                                            ----  Gb  [ Linker created ]
+  0x20020000  __INST_RAM_segment_end__                      ----  Gb  [ Linker created ]
+  0x20020000  __DATA_RAM_segment_used_end__
+                                                            ----  Gb  [ Linker created ]
+  0x20020000  __DATA_RAM_segment_end__                      ----  Gb  [ Linker created ]
+
+
+***********************************************************************************************
+***                                                                                         ***
+***                                      LINK SUMMARY                                       ***
+***                                                                                         ***
+***********************************************************************************************
+
+Memory breakdown:
+
+   10 952 bytes read-only  code    + 
+      126 bytes read-only  data    =  11 078 bytes read-only (total)
+   79 133 bytes read-write data
+
+Region summary:
+
+  Name        Range                     Size                 Used               Unused       Alignment Loss
+  ----------  -----------------  -----------  -------------------  -------------------  -------------------
+  FLASH       08000000-0807ffff      524 288       11 082   2.11%      513 204  97.89%            2   0.00%
+  CCM_RAM1    10000000-1000ffff       65 536          285   0.43%       65 251  99.57%            0   0.00%
+  INST_RAM    20000000-2001ffff      131 072       78 848  60.16%       52 224  39.84%            0   0.00%
+
+Link complete: 0 errors, 0 warnings, 0 remarks
